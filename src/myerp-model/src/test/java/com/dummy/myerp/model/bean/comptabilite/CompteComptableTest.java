@@ -25,25 +25,28 @@ public class CompteComptableTest {
     }
 
     @Test
-    public void testToString() {
-        compteComptable.setLibelle("test");
-        compteComptable.setNumero(10);
-
-        String expected = "CompteComptable{numero=" + compteComptable.getNumero() + ", libelle='" + compteComptable.getLibelle() + "'}";
-        String result = compteComptable.toString();
-
-        assertEquals(expected,result);
+    public void toStringTest(){
+        this.compteComptable = new CompteComptable(listCompte.get(1).getNumero(),listCompte.get(1).getLibelle());
+        String expectedString = "CompteComptable{numero=" + listCompte.get(1).getNumero() + ", libelle='" + listCompte.get(1).getLibelle() + "'}";
+        String resultString = compteComptable.toString();
+        assertThat(expectedString).isEqualTo(resultString);
     }
 
     @Test
-    public void givenNull_ReturnNull() {
+    public void getByNumero_givenNull_ReturnNull() {
         CompteComptable expected = CompteComptable.getByNumero(listCompte, null);
         assertNull(expected);
     }
 
     @Test
-    public void givenNumero_ReturnCompte() {
+    public void getByNumero_givenNumero_ReturnCompte() {
         CompteComptable expected = CompteComptable.getByNumero(listCompte, 2);
         assertThat(expected).isEqualTo(listCompte.get(1));
+    }
+
+    @Test
+    public void getByNumero_givenWrongNumber_ReturnNull() {
+        CompteComptable expected = CompteComptable.getByNumero(listCompte, 3);
+        assertThat(expected).isNull();
     }
 }

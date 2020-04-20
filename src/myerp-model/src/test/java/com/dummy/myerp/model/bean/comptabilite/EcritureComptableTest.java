@@ -1,7 +1,9 @@
 package com.dummy.myerp.model.bean.comptabilite;
 
 import java.math.BigDecimal;
+import java.util.Date;
 
+import org.apache.commons.lang.StringUtils;
 import org.apache.commons.lang3.ObjectUtils;
 import org.apache.commons.lang3.ObjectUtils;
 import org.junit.Assert;
@@ -58,23 +60,23 @@ public class EcritureComptableTest {
     }
 
     /**
-     getTotalDebit()
+     Test getTotalDebit()
      **/
 
     @Test
-    public void EmptyOrNoIncomeDebit_ReturnZero () {
+    public void testGetTotalDebit_EmptyOrNoIncomeDebit_ReturnZero () {
         vEcriture.getListLigneEcriture().add(this.createLigne(1,null,null));
         assertEquals(BigDecimal.valueOf(0), vEcriture.getTotalDebit());
     }
 
     @Test
-    public void OneDebit_ReturnDebit () {
+    public void testGetTotalDebit_OneDebit_ReturnDebit () {
         vEcriture.getListLigneEcriture().add(this.createLigne(1,"10.04",null));
         assertEquals(BigDecimal.valueOf(10.04), vEcriture.getTotalDebit());
     }
 
     @Test
-    public void MultipleDebit_ReturnDebit () {
+    public void testGetTotalDebit_MultipleDebit_ReturnDebit () {
         vEcriture.getListLigneEcriture().add(this.createLigne(1,"10",null));
         vEcriture.getListLigneEcriture().add(this.createLigne(1,"100",null));
         vEcriture.getListLigneEcriture().add(this.createLigne(1,"200",null));
@@ -82,11 +84,11 @@ public class EcritureComptableTest {
     }
 
     /**
-     getTotalCredit()
+     Test  getTotalCredit()
      **/
 
     @Test
-    public void EmptyOrNoIncomeCredit_ReturnZero () {
+    public void testGetTotalCredit_EmptyOrNoIncomeCredit_ReturnZero () {
         vEcriture.getListLigneEcriture().add(this.createLigne(1,null,null));
         assertEquals(BigDecimal.valueOf(0), vEcriture.getTotalCredit());
         vEcriture.getListLigneEcriture().add(this.createLigne(1,"0",null));
@@ -94,16 +96,41 @@ public class EcritureComptableTest {
     }
 
     @Test
-    public void OneCredit_ReturnCrebit () {
+    public void testGetTotalCredit_OneCredit_ReturnCrebit () {
         vEcriture.getListLigneEcriture().add(this.createLigne(1,null ,"20"));
         assertEquals(BigDecimal.valueOf(20), vEcriture.getTotalCredit());
     }
 
     @Test
-    public void MultipleCredit_ReturnCrebit () {
+    public void testGetTotalCredit_MultipleCredit_ReturnCrebit () {
         vEcriture.getListLigneEcriture().add(this.createLigne(1,null,"30"));
         vEcriture.getListLigneEcriture().add(this.createLigne(1,null,"100.11"));
         vEcriture.getListLigneEcriture().add(this.createLigne(1,null,"70"));
         assertEquals(BigDecimal.valueOf(200.11), vEcriture.getTotalCredit());
     }
+
+    @Test
+    public void toStringTest(){
+        EcritureComptable ecritureComptable = new EcritureComptable();
+        ecritureComptable.setLibelle("test");
+        ecritureComptable.setJournal(new JournalComptable("testCode", "testLibelle"));
+        ecritureComptable.setId(1);
+        ecritureComptable.setDate(new Date());
+        ecritureComptable.setReference("AA-0000-00000");
+
+        String expectedString = "EcritureComptable{id=" + ecritureComptable.getId() +
+                ", journal="+ecritureComptable.getJournal() +
+                ", reference='"+ecritureComptable.getReference()+"'" +
+                ", date=" + ecritureComptable.getDate() +
+                ", libelle='" + ecritureComptable.getLibelle() + "'" +
+                ", totalDebit=" + ecritureComptable.getTotalDebit().toPlainString() +
+                ", totalCredit=" + ecritureComptable.getTotalCredit().toPlainString() +
+                ", listLigneEcriture=[\n" +
+                StringUtils.join(ecritureComptable.getListLigneEcriture(), "\n")+
+                "\n]}";
+        String resultString = ecritureComptable.toString();
+
+        Assert.assertEquals(expectedString, resultString);
+    }
 }
+

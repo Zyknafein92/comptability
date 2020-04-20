@@ -13,7 +13,6 @@ public class LigneEcritureComptableTest {
 
     @Test
     public void testToString() {
-
         LigneEcritureComptable ligne = new LigneEcritureComptable(
                 new CompteComptable(1,"test"),
                 "testLigne",

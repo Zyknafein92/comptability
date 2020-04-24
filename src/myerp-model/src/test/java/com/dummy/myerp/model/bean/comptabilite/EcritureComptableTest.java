@@ -64,19 +64,19 @@ public class EcritureComptableTest {
      **/
 
     @Test
-    public void testGetTotalDebit_EmptyOrNoIncomeDebit_ReturnZero () {
+    public void testGetTotalDebitEmptyOrNoIncomeDebitReturnZero () {
         vEcriture.getListLigneEcriture().add(this.createLigne(1,null,null));
         assertEquals(BigDecimal.valueOf(0), vEcriture.getTotalDebit());
     }
 
     @Test
-    public void testGetTotalDebit_OneDebit_ReturnDebit () {
+    public void testGetTotalDebitOneDebitReturnDebit () {
         vEcriture.getListLigneEcriture().add(this.createLigne(1,"10.04",null));
         assertEquals(BigDecimal.valueOf(10.04), vEcriture.getTotalDebit());
     }
 
     @Test
-    public void testGetTotalDebit_MultipleDebit_ReturnDebit () {
+    public void testGetTotalDebitMultipleDebitReturnDebit () {
         vEcriture.getListLigneEcriture().add(this.createLigne(1,"10",null));
         vEcriture.getListLigneEcriture().add(this.createLigne(1,"100",null));
         vEcriture.getListLigneEcriture().add(this.createLigne(1,"200",null));
@@ -88,7 +88,7 @@ public class EcritureComptableTest {
      **/
 
     @Test
-    public void testGetTotalCredit_EmptyOrNoIncomeCredit_ReturnZero () {
+    public void testGetTotalCreditEmptyOrNoIncomeCreditReturnZero () {
         vEcriture.getListLigneEcriture().add(this.createLigne(1,null,null));
         assertEquals(BigDecimal.valueOf(0), vEcriture.getTotalCredit());
         vEcriture.getListLigneEcriture().add(this.createLigne(1,"0",null));
@@ -96,13 +96,13 @@ public class EcritureComptableTest {
     }
 
     @Test
-    public void testGetTotalCredit_OneCredit_ReturnCrebit () {
+    public void testGetTotalCreditOneCreditReturnCrebit () {
         vEcriture.getListLigneEcriture().add(this.createLigne(1,null ,"20"));
         assertEquals(BigDecimal.valueOf(20), vEcriture.getTotalCredit());
     }
 
     @Test
-    public void testGetTotalCredit_MultipleCredit_ReturnCrebit () {
+    public void testGetTotalCreditMultipleCreditReturnCrebit () {
         vEcriture.getListLigneEcriture().add(this.createLigne(1,null,"30"));
         vEcriture.getListLigneEcriture().add(this.createLigne(1,null,"100.11"));
         vEcriture.getListLigneEcriture().add(this.createLigne(1,null,"70"));

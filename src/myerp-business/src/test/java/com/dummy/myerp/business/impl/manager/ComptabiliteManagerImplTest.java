@@ -10,6 +10,8 @@ import com.dummy.myerp.model.bean.comptabilite.JournalComptable;
 import com.dummy.myerp.model.bean.comptabilite.LigneEcritureComptable;
 import com.dummy.myerp.technical.exception.FunctionalException;
 
+import static org.assertj.core.api.Assertions.assertThat;
+
 
 public class ComptabiliteManagerImplTest {
 
@@ -23,6 +25,7 @@ public class ComptabiliteManagerImplTest {
         vEcritureComptable.setJournal(new JournalComptable("AC", "Achat"));
         vEcritureComptable.setDate(new Date());
         vEcritureComptable.setLibelle("Libelle");
+        vEcritureComptable.setReference("AC-2020/00001");
         vEcritureComptable.getListLigneEcriture().add(new LigneEcritureComptable(new CompteComptable(1),
                                                                                  null, new BigDecimal(123),
                                                                                  null));
@@ -51,7 +54,7 @@ public class ComptabiliteManagerImplTest {
                                                                                  null));
         vEcritureComptable.getListLigneEcriture().add(new LigneEcritureComptable(new CompteComptable(2),
                                                                                  null, null,
-                                                                                 new BigDecimal(1234)));
+                                                                                 new BigDecimal(123)));
         manager.checkEcritureComptableUnit(vEcritureComptable);
     }
 
@@ -69,6 +72,25 @@ public class ComptabiliteManagerImplTest {
                                                                                  null, new BigDecimal(123),
                                                                                  null));
         manager.checkEcritureComptableUnit(vEcritureComptable);
+    }
+
+    @Test
+    public void testStringFormatRG5() {
+        int num = 1111;
+        String formatted = String.format("%05d", num);
+        assertThat(formatted).isEqualTo("01111");
+
+        int number = 4;
+        String formatted2 = String.format("%05d", number);
+        assertThat(formatted2).isEqualTo("00004");
+
+        int number2 = 110;
+        String formatted3 = String.format("%05d", number2);
+        assertThat(formatted3).isEqualTo("00110");
+
+        int number3 = 52345;
+        String formatted4 = String.format("%05d", number3);
+        assertThat(formatted4).isEqualTo("52345");
     }
 
 }

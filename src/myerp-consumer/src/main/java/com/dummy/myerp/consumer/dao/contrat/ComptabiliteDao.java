@@ -5,6 +5,7 @@ import java.util.List;
 import com.dummy.myerp.model.bean.comptabilite.CompteComptable;
 import com.dummy.myerp.model.bean.comptabilite.EcritureComptable;
 import com.dummy.myerp.model.bean.comptabilite.JournalComptable;
+import com.dummy.myerp.model.bean.comptabilite.SequenceEcritureComptable;
 import com.dummy.myerp.technical.exception.NotFoundException;
 
 
@@ -53,6 +54,7 @@ public interface ComptabiliteDao {
      */
     EcritureComptable getEcritureComptableByRef(String pReference) throws NotFoundException;
 
+
     /**
      * Charge la liste des lignes d'écriture de l'écriture comptable {@code pEcritureComptable}
      *
@@ -80,4 +82,25 @@ public interface ComptabiliteDao {
      * @param pId l'id de l'écriture
      */
     void deleteEcritureComptable(Integer pId);
+
+    // ==================== SequenceEcritureComptable ====================
+    /**
+     * Renvoie la séquence d'écriture comptable selon le code journal et l'année.
+     * @param pCodeJournal
+     * @param pAnnee
+     * @return {@link SequenceEcritureComptable}
+     */
+    SequenceEcritureComptable getSequenceEcritureComptable(String pCodeJournal, int pAnnee) throws NotFoundException;
+
+    /**
+     * Insert une nouvelle séquence d'écriture comptable
+     * @param pSequenceEcritureComptable
+     */
+    void insertSequenceEcritureComptable(SequenceEcritureComptable pSequenceEcritureComptable);
+
+    /**
+     * Met à jour la séquence d'écriture comptable
+     * @param vSequenceEcritureComptable
+     */
+    void updateSequenceEcritureComptable(SequenceEcritureComptable vSequenceEcritureComptable);
 }

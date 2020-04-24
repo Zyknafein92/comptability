@@ -49,4 +49,5 @@ public class CompteComptableTest {
         CompteComptable expected = CompteComptable.getByNumero(listCompte, 3);
         assertThat(expected).isNull();
     }
+
 }

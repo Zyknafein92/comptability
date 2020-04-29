@@ -11,13 +11,13 @@ import com.dummy.myerp.business.impl.TransactionManager;
 public abstract class BusinessTestCase {
 
     static {
-        SpringRegistry.init();
+        com.dummy.myerp.testbusiness.business.SpringRegistry.init();
     }
 
     /** {@link BusinessProxy} */
-    private static final BusinessProxy BUSINESS_PROXY = SpringRegistry.getBusinessProxy();
+    private static final BusinessProxy BUSINESS_PROXY = com.dummy.myerp.testbusiness.business.SpringRegistry.getBusinessProxy();
     /** {@link TransactionManager} */
-    private static final TransactionManager TRANSACTION_MANAGER = SpringRegistry.getTransactionManager();
+    private static final TransactionManager TRANSACTION_MANAGER = com.dummy.myerp.testbusiness.business.SpringRegistry.getTransactionManager();
 
 
     // ==================== Constructeurs ====================

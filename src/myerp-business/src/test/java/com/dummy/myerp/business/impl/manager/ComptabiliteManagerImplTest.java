@@ -3,20 +3,20 @@ package com.dummy.myerp.business.impl.manager;
 import java.math.BigDecimal;
 import java.util.Date;
 
+import com.dummy.myerp.consumer.dao.contrat.DaoProxy;
 import org.junit.Test;
 import com.dummy.myerp.model.bean.comptabilite.CompteComptable;
 import com.dummy.myerp.model.bean.comptabilite.EcritureComptable;
 import com.dummy.myerp.model.bean.comptabilite.JournalComptable;
 import com.dummy.myerp.model.bean.comptabilite.LigneEcritureComptable;
 import com.dummy.myerp.technical.exception.FunctionalException;
+import org.mockito.Mock;
 
 import static org.assertj.core.api.Assertions.assertThat;
-
 
 public class ComptabiliteManagerImplTest {
 
     private ComptabiliteManagerImpl manager = new ComptabiliteManagerImpl();
-
 
     @Test
     public void checkEcritureComptableUnit() throws Exception {

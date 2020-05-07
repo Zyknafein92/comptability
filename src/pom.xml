@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://maven.apache.org/POM/4.0.0"
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns="http://maven.apache.org/POM/4.0.0"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
@@ -51,8 +52,8 @@
         <application.name>MyERP</application.name>
 
         <!-- ===== Version properties ===== -->
-        <log4j.version>2.8.1</log4j.version>
-        <spring.version>4.3.7.RELEASE</spring.version>
+        <log4j.version>2.13.0</log4j.version>
+        <spring.version>5.2.2.RELEASE</spring.version>
         <junit-platform.version>5.4.0</junit-platform.version>
         <mockito.version>3.2.4</mockito.version>
     </properties>
@@ -73,7 +74,7 @@
     <!-- Profiles -->
     <!-- =============================================================== -->
     <profiles>
-        <!-- Profile utilisé par le plugin m2e d'Eclipse -->
+        <!--Profile utilisé par le plugin m2e d'Eclipse-->
         <profile>
             <id>m2e</id>
             <activation>
@@ -101,17 +102,17 @@
     <!-- =============================================================== -->
     <!-- Repositories -->
     <!-- =============================================================== -->
-    <repositories>
-        <!-- ===== Project local repository ===== -->
-        <repository>
-            <id>project.local</id>
-            <name>project.local</name>
-            <url>file://${basedir}/../src/lib/</url>
-            <releases>
-                <updatePolicy>always</updatePolicy>
-            </releases>
-        </repository>
-    </repositories>
+    <!--  <repositories>-->
+    <!--    &lt;!&ndash; ===== Project local repository ===== &ndash;&gt;-->
+    <!--    <repository>-->
+    <!--      <id>project.local</id>-->
+    <!--      <name>project.local</name>-->
+    <!--      <url>file://${basedir}/../src/</url>-->
+    <!--      <releases>-->
+    <!--        <updatePolicy>always</updatePolicy>-->
+    <!--      </releases>-->
+    <!--    </repository>-->
+    <!--  </repositories>-->
 
 
     <!-- =============================================================== -->
@@ -120,6 +121,11 @@
     <dependencyManagement>
         <dependencies>
             <!-- ========== Modules ========== -->
+            <dependency>
+                <groupId>${project.groupId}</groupId>
+                <artifactId>myerp-business</artifactId>
+                <version>${project.version}</version>
+            </dependency>
             <dependency>
                 <groupId>${project.groupId}</groupId>
                 <artifactId>myerp-technical</artifactId>
@@ -133,11 +139,6 @@
             <dependency>
                 <groupId>${project.groupId}</groupId>
                 <artifactId>myerp-consumer</artifactId>
-                <version>${project.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>${project.groupId}</groupId>
-                <artifactId>myerp-business</artifactId>
                 <version>${project.version}</version>
             </dependency>
 
@@ -212,6 +213,12 @@
                 <version>${spring.version}</version>
                 <scope>compile</scope>
             </dependency>
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-test</artifactId>
+                <version>${spring.version}</version>
+                <scope>test</scope>
+            </dependency>
 
             <!-- ===== Spring JDBC/Tx ===== -->
             <!-- spring-tx : transaction, JCA, DAO -->
@@ -245,18 +252,15 @@
             </dependency>
 
             <!-- ===== Test unitaires ===== -->
+
+            <!-- ===== Test unitaires Junit-4 initial version ===== -->
             <dependency>
                 <groupId>junit</groupId>
                 <artifactId>junit</artifactId>
                 <version>4.12</version>
                 <scope>test</scope>
             </dependency>
-            <dependency>
-                <groupId>org.assertj</groupId>
-                <artifactId>assertj-core</artifactId>
-                <version>3.15.0</version>
-                <scope>test</scope>
-            </dependency>
+            <!-- ===== Test unitaires Junit-5 latest version ===== -->
             <dependency>
                 <groupId>org.junit.jupiter</groupId>
                 <artifactId>junit-jupiter-engine</artifactId>
@@ -269,6 +273,20 @@
                 <version>${junit-platform.version}</version>
                 <scope>test</scope>
             </dependency>
+            <dependency>
+                <groupId>org.assertj</groupId>
+                <artifactId>assertj-core</artifactId>
+                <version>3.14.0</version>
+            </dependency>
+            <!-- ===== Test unitaires (retroActive Junit-4 for Junit-5 )===== -->
+            <dependency>
+                <groupId>org.junit.vintage</groupId>
+                <artifactId>junit-vintage-engine</artifactId>
+                <version>${junit-platform.version}</version>
+                <scope>test</scope>
+            </dependency>
+
+            <!-- ===== Test integration Mockito===== -->
             <dependency>
                 <groupId>org.mockito</groupId>
                 <artifactId>mockito-core</artifactId>
@@ -305,7 +323,7 @@
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-compiler-plugin</artifactId>
-                    <version>3.6.1</version>
+                    <version>3.8.1</version>
                     <configuration>
                         <source>${java.version}</source>
                         <target>${java.version}</target>
@@ -316,7 +334,7 @@
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-resources-plugin</artifactId>
-                    <version>3.0.2</version>
+                    <version>3.1.0</version>
                     <configuration>
                         <encoding>${project.build.sourceEncoding}</encoding>
                     </configuration>
@@ -326,7 +344,7 @@
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-dependency-plugin</artifactId>
-                    <version>3.0</version>
+                    <version>3.1.1</version>
                 </plugin>
 
                 <!-- ===== Création des JAR ===== -->
@@ -358,10 +376,60 @@
                 </plugin>
 
                 <!-- ===== Test / Reporting ===== -->
+
+                <!-- ===== Test / Reporting (Unit Test) ===== -->
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-surefire-plugin</artifactId>
-                    <version>2.20</version>
+                    <version>2.22.2</version>
+                    <!--                              <configuration>-->
+                    <!--                                <argLine>-->
+                    <!--                                  &#45;&#45;illegal-access=permit-->
+                    <!--                                </argLine>-->
+                    <!--                              </configuration>-->
+                </plugin>
+
+                <!-- ===== Test / Reporting (Integration Test) ===== -->
+
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-failsafe-plugin</artifactId>
+                    <version>2.22.2</version>
+                    <!--          <configuration>-->
+                    <!--            <argLine>-->
+                    <!--              &#45;&#45;illegal-access=permit-->
+                    <!--            </argLine>-->
+                    <!--          </configuration>-->
+                    <executions>
+                        <execution>
+                            <goals>
+                                <goal>integration-test</goal>
+                                <goal>verify</goal>
+                            </goals>
+                        </execution>
+                    </executions>
+                </plugin>
+                <plugin>
+                    <groupId>org.codehaus.mojo</groupId>
+                    <artifactId>cobertura-maven-plugin</artifactId>
+                    <version>2.7</version>
+                    <configuration>
+                        <formats>
+                            <format>html</format>
+                            <format>xml</format>
+                        </formats>
+                        <aggregate>true</aggregate>
+                    </configuration>
+                    <executions>
+                        <execution>
+                            <id>cobertura-check</id>
+                            <phase>verify</phase>
+                            <goals>
+                                <goal>cobertura</goal>
+                                <goal>cobertura-integration-test</goal>
+                            </goals>
+                        </execution>
+                    </executions>
                 </plugin>
 
                 <!-- ===== Plugin d'analyse de code Checkstyle ===== -->
@@ -387,6 +455,7 @@
                 </plugin>
 
                 <!-- ===== Project info ===== -->
+
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-project-info-reports-plugin</artifactId>
@@ -423,7 +492,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-project-info-reports-plugin</artifactId>
-                <version>2.9</version>
+                <version>3.0.0</version>
                 <configuration>
                     <dependencyDetailsEnabled>false</dependencyDetailsEnabled>
                 </configuration>
@@ -450,7 +519,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-report-plugin</artifactId>
-                <version>2.20</version>
+                <version>2.22.2</version>
                 <configuration>
                     <linkXRef>false</linkXRef>
                 </configuration>
@@ -547,6 +616,11 @@
                         </reports>
                     </reportSet>
                 </reportSets>
+            </plugin>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>cobertura-maven-plugin</artifactId>
+                <version>2.7</version>
             </plugin>
         </plugins>
     </reporting>

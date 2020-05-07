@@ -186,7 +186,22 @@ public class ComptabiliteManagerImpl extends AbstractBusinessManager implements 
                 throw new FunctionalException("L'année de référence ne correspond pas à l'année courante");
             }
 
-            // condition voir si getvaleur+1
+            try {
+                SequenceEcritureComptable vSequenceEcritureComptable = getDaoProxy().getComptabiliteDao()
+                        .getSequenceEcritureComptable(
+                                pEcritureComptable.getJournal().getCode(),
+                                pEcritureComptable.getDate().getYear());
+
+                if(!testReference[2].equals(String.valueOf(String.format("%05d", vSequenceEcritureComptable.getDerniereValeur())))){
+                     throw new FunctionalException("Le numéro de séquence de la référence"
+                            + vSequenceEcritureComptable.getDerniereValeur() +
+                             " ne correspond pas pas à la dernière séquence du journal : "
+                             + testReference[2]);
+                }
+            } catch (NotFoundException e) {
+                System.err.println("La séquence d'écriture comptable n'existe pas.");
+            }
+
 
         }
 
@@ -215,7 +230,7 @@ public class ComptabiliteManagerImpl extends AbstractBusinessManager implements 
                 // c'est qu'il y a déjà une autre écriture avec la même référence
                 if (pEcritureComptable.getId() == null
                         || !pEcritureComptable.getId().equals(vECRef.getId())) {
-                    throw new FunctionalException("Une autre écriture comptable existe déjà avec la même référence.");
+                   throw new FunctionalException("Une autre écriture comptable existe déjà avec la même référence.");
                 }
             } catch (NotFoundException vEx) {
                 // Dans ce cas, c'est bon, ça veut dire qu'on n'a aucune autre écriture avec la même référence.
@@ -244,6 +259,7 @@ public class ComptabiliteManagerImpl extends AbstractBusinessManager implements 
      */
     @Override
     public void updateEcritureComptable(EcritureComptable pEcritureComptable) throws FunctionalException {
+        this.checkEcritureComptable(pEcritureComptable);
         TransactionStatus vTS = getTransactionManager().beginTransactionMyERP();
         try {
             getDaoProxy().getComptabiliteDao().updateEcritureComptable(pEcritureComptable);

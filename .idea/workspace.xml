@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="6437c220-ba31-4bf4-b2b1-fe30a03ae391" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_dummy_myerp_myerp_consumer_1_x_x_SNAPSHOT.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_dummy_myerp_myerp_model_1_x_x_SNAPSHOT.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_dummy_myerp_myerp_technical_1_x_x_SNAPSHOT.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_test_5_2_2_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/p9.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/myerp-business/src/test/java/com/dummy/myerp/business/impl/manager/ComtabilititeManagangerImplIntTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/travis.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/comptability.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_logging_log4j_log4j_api_2_8_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_logging_log4j_log4j_api_2_13_0.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_logging_log4j_log4j_core_2_8_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_logging_log4j_log4j_jcl_2_13_0.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_logging_log4j_log4j_jcl_2_8_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_logging_log4j_log4j_core_2_13_0.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_logging_log4j_log4j_slf4j_impl_2_8_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_logging_log4j_log4j_slf4j_impl_2_13_0.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_assertj_assertj_core_3_15_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_api_1_7_24.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_api_1_7_25.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_aop_4_3_7_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_aop_5_2_2_RELEASE.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_beans_4_3_7_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_beans_5_2_2_RELEASE.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_4_3_7_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_5_2_2_RELEASE.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_core_4_3_7_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_jdbc_5_2_2_RELEASE.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_expression_4_3_7_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_expression_5_2_2_RELEASE.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_jdbc_4_3_7_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_core_5_2_2_RELEASE.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_test_unknown.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_jcl_5_2_2_RELEASE.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_tx_4_3_7_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_tx_5_2_2_RELEASE.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sqldialects.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/myerp-business/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/myerp-business/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/myerp-business/src/main/java/com/dummy/myerp/business/contrat/manager/ComptabiliteManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/myerp-business/src/main/java/com/dummy/myerp/business/contrat/manager/ComptabiliteManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/myerp-business/src/main/java/com/dummy/myerp/business/impl/manager/ComptabiliteManagerImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/myerp-business/src/main/java/com/dummy/myerp/business/impl/manager/ComptabiliteManagerImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/myerp-business/src/test/java/com/dummy/myerp/business/impl/ComtabilititeManagangerImplIntTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/myerp-business/src/test/java/com/dummy/myerp/business/impl/manager/ComptabiliteManagerImplTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/myerp-business/src/test/java/com/dummy/myerp/business/impl/manager/ComptabiliteManagerImplTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/myerp-consumer/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/myerp-consumer/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/myerp-consumer/src/main/resources/com/dummy/myerp/consumer/sqlContext.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/myerp-consumer/src/main/resources/com/dummy/myerp/consumer/sqlContext.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/myerp-model/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/myerp-model/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/myerp-model/src/main/java/com/dummy/myerp/model/bean/comptabilite/EcritureComptable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/myerp-model/src/main/java/com/dummy/myerp/model/bean/comptabilite/EcritureComptable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/myerp-model/src/test/java/com/dummy/myerp/model/bean/comptabilite/EcritureComptableTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/myerp-model/src/test/java/com/dummy/myerp/model/bean/comptabilite/EcritureComptableTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/myerp-technical/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/myerp-technical/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pom.xml" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="ROOT_SYNC" value="DONT_SYNC" />
+  </component>
+  <component name="ProjectId" id="1bDkEPmjWGEiaTq9k0PTYiZvhSw" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+    <option name="showMembers" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15332031" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="reference.settings.ide.settings.uml" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.dummy.myerp.business.impl.manager" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Zyknafein\IdeaProjects\p9\src" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JUnit.ComtabilititeManagangerImplIntTest.testDeleteEcritureComptableShouldCallTransactionManager">
+    <configuration name="ComtabilititeManagangerImplIntTest.testCheckEcritureComptableContextRG6ExistingRefReturnFunctionalError" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="myerp-business" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.dummy.myerp.business.impl.manager.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.dummy.myerp.business.impl.manager" />
+      <option name="MAIN_CLASS_NAME" value="com.dummy.myerp.business.impl.manager.ComtabilititeManagangerImplIntTest" />
+      <option name="METHOD_NAME" value="testCheckEcritureComptableContextRG6ExistingRefReturnFunctionalError" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ComtabilititeManagangerImplIntTest.testCheckEcritureComptableContextRG6NewRefReturnFunctionalError" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="myerp-business" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.dummy.myerp.business.impl.manager.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.dummy.myerp.business.impl.manager" />
+      <option name="MAIN_CLASS_NAME" value="com.dummy.myerp.business.impl.manager.ComtabilititeManagangerImplIntTest" />
+      <option name="METHOD_NAME" value="testCheckEcritureComptableContextRG6NewRefReturnFunctionalError" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ComtabilititeManagangerImplIntTest.testDeleteEcritureComptableShouldCallTransactionManager" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="myerp-business" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.dummy.myerp.business.impl.manager.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.dummy.myerp.business.impl.manager" />
+      <option name="MAIN_CLASS_NAME" value="com.dummy.myerp.business.impl.manager.ComtabilititeManagangerImplIntTest" />
+      <option name="METHOD_NAME" value="testDeleteEcritureComptableShouldCallTransactionManager" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ComtabilititeManagangerImplIntTest.testInsertEcritureComptableShouldCallDao" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="myerp-business" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.dummy.myerp.business.impl.manager.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.dummy.myerp.business.impl.manager" />
+      <option name="MAIN_CLASS_NAME" value="com.dummy.myerp.business.impl.manager.ComtabilititeManagangerImplIntTest" />
+      <option name="METHOD_NAME" value="testInsertEcritureComptableShouldCallDao" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ComtabilititeManagangerImplIntTest.testUpdateEcritureShouldCallTransactionManager" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="myerp-business" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.dummy.myerp.business.impl.manager.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.dummy.myerp.business.impl.manager" />
+      <option name="MAIN_CLASS_NAME" value="com.dummy.myerp.business.impl.manager.ComtabilititeManagangerImplIntTest" />
+      <option name="METHOD_NAME" value="testUpdateEcritureShouldCallTransactionManager" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.ComtabilititeManagangerImplIntTest.testDeleteEcritureComptableShouldCallTransactionManager" />
+        <item itemvalue="JUnit.ComtabilititeManagangerImplIntTest.testUpdateEcritureShouldCallTransactionManager" />
+        <item itemvalue="JUnit.ComtabilititeManagangerImplIntTest.testInsertEcritureComptableShouldCallDao" />
+        <item itemvalue="JUnit.ComtabilititeManagangerImplIntTest.testCheckEcritureComptableContextRG6ExistingRefReturnFunctionalError" />
+        <item itemvalue="JUnit.ComtabilititeManagangerImplIntTest.testCheckEcritureComptableContextRG6NewRefReturnFunctionalError" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="6437c220-ba31-4bf4-b2b1-fe30a03ae391" name="Default Changelist" comment="" />
+      <created>1588173939017</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1588173939017</updated>
+      <workItem from="1588173940236" duration="43000" />
+      <workItem from="1588173994041" duration="550000" />
+      <workItem from="1588174547412" duration="105000" />
+      <workItem from="1588174777389" duration="1921000" />
+      <workItem from="1588602833259" duration="15249000" />
+      <workItem from="1588858848757" duration="2613000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="670" y="274" key="#Project_Structure" timestamp="1588620140306">
+      <screen x="0" y="0" width="1920" height="1400" />
+    </state>
+    <state x="670" y="274" key="#Project_Structure/0.0.1920.1400@0.0.1920.1400" timestamp="1588620140306" />
+    <state x="1200" y="274" key="#Project_Structure/0.0.3440.1400@0.0.3440.1400" timestamp="1588608581417" />
+    <state x="1472" y="569" width="496" height="268" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1588607202596">
+      <screen x="0" y="0" width="3440" height="1400" />
+    </state>
+    <state x="1472" y="569" width="496" height="268" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.3440.1400@0.0.3440.1400" timestamp="1588607202596" />
+    <state x="1492" y="413" key="#index.html" timestamp="1588175680378">
+      <screen x="0" y="0" width="3440" height="1400" />
+    </state>
+    <state x="1492" y="413" key="#index.html/0.0.3440.1400@0.0.3440.1400" timestamp="1588175680378" />
+    <state x="1500" y="393" key="FileChooserDialogImpl" timestamp="1588174647612">
+      <screen x="0" y="0" width="3440" height="1400" />
+    </state>
+    <state x="1500" y="393" key="FileChooserDialogImpl/0.0.3440.1400@0.0.3440.1400" timestamp="1588174647612" />
+    <state width="3397" height="401" key="GridCell.Tab.0.bottom" timestamp="1588860790019">
+      <screen x="0" y="0" width="3440" height="1400" />
+    </state>
+    <state width="3397" height="492" key="GridCell.Tab.0.bottom/0.0.1920.1400@0.0.1920.1400" timestamp="1588621940134" />
+    <state width="3397" height="401" key="GridCell.Tab.0.bottom/0.0.3440.1400@0.0.3440.1400" timestamp="1588860790019" />
+    <state width="3397" height="401" key="GridCell.Tab.0.center" timestamp="1588860790019">
+      <screen x="0" y="0" width="3440" height="1400" />
+    </state>
+    <state width="3397" height="492" key="GridCell.Tab.0.center/0.0.1920.1400@0.0.1920.1400" timestamp="1588621940133" />
+    <state width="3397" height="401" key="GridCell.Tab.0.center/0.0.3440.1400@0.0.3440.1400" timestamp="1588860790019" />
+    <state width="3397" height="401" key="GridCell.Tab.0.left" timestamp="1588860790019">
+      <screen x="0" y="0" width="3440" height="1400" />
+    </state>
+    <state width="3397" height="492" key="GridCell.Tab.0.left/0.0.1920.1400@0.0.1920.1400" timestamp="1588621940133" />
+    <state width="3397" height="401" key="GridCell.Tab.0.left/0.0.3440.1400@0.0.3440.1400" timestamp="1588860790019" />
+    <state width="3397" height="401" key="GridCell.Tab.0.right" timestamp="1588860790019">
+      <screen x="0" y="0" width="3440" height="1400" />
+    </state>
+    <state width="3397" height="492" key="GridCell.Tab.0.right/0.0.1920.1400@0.0.1920.1400" timestamp="1588621940133" />
+    <state width="3397" height="401" key="GridCell.Tab.0.right/0.0.3440.1400@0.0.3440.1400" timestamp="1588860790019" />
+    <state width="3397" height="492" key="GridCell.Tab.1.bottom" timestamp="1588621940134">
+      <screen x="0" y="0" width="1920" height="1400" />
+    </state>
+    <state width="3397" height="492" key="GridCell.Tab.1.bottom/0.0.1920.1400@0.0.1920.1400" timestamp="1588621940134" />
+    <state width="3397" height="492" key="GridCell.Tab.1.bottom/0.0.3440.1400@0.0.3440.1400" timestamp="1588617728683" />
+    <state width="3397" height="492" key="GridCell.Tab.1.center" timestamp="1588621940134">
+      <screen x="0" y="0" width="1920" height="1400" />
+    </state>
+    <state width="3397" height="492" key="GridCell.Tab.1.center/0.0.1920.1400@0.0.1920.1400" timestamp="1588621940134" />
+    <state width="3397" height="492" key="GridCell.Tab.1.center/0.0.3440.1400@0.0.3440.1400" timestamp="1588617728683" />
+    <state width="3397" height="492" key="GridCell.Tab.1.left" timestamp="1588621940134">
+      <screen x="0" y="0" width="1920" height="1400" />
+    </state>
+    <state width="3397" height="492" key="GridCell.Tab.1.left/0.0.1920.1400@0.0.1920.1400" timestamp="1588621940134" />
+    <state width="3397" height="492" key="GridCell.Tab.1.left/0.0.3440.1400@0.0.3440.1400" timestamp="1588617728683" />
+    <state width="3397" height="492" key="GridCell.Tab.1.right" timestamp="1588621940134">
+      <screen x="0" y="0" width="1920" height="1400" />
+    </state>
+    <state width="3397" height="492" key="GridCell.Tab.1.right/0.0.1920.1400@0.0.1920.1400" timestamp="1588621940134" />
+    <state width="3397" height="492" key="GridCell.Tab.1.right/0.0.3440.1400@0.0.3440.1400" timestamp="1588617728683" />
+    <state x="1385" y="404" key="NewModule_or_Project.wizard" timestamp="1588174649715">
+      <screen x="0" y="0" width="3440" height="1400" />
+    </state>
+    <state x="1385" y="404" key="NewModule_or_Project.wizard/0.0.3440.1400@0.0.3440.1400" timestamp="1588174649715" />
+    <state x="1436" y="402" key="RollbackChangesDialog" timestamp="1588174522409">
+      <screen x="0" y="0" width="3440" height="1400" />
+    </state>
+    <state x="1436" y="402" key="RollbackChangesDialog/0.0.3440.1400@0.0.3440.1400" timestamp="1588174522409" />
+    <state x="670" y="274" key="SettingsEditor" timestamp="1588620133092">
+      <screen x="0" y="0" width="1920" height="1400" />
+    </state>
+    <state x="670" y="274" key="SettingsEditor/0.0.1920.1400@0.0.1920.1400" timestamp="1588620133092" />
+    <state x="1200" y="274" key="SettingsEditor/0.0.3440.1400@0.0.3440.1400" timestamp="1588174446213" />
+    <state x="1312" y="433" key="Vcs.Push.Dialog.v2" timestamp="1588174531732">
+      <screen x="0" y="0" width="3440" height="1400" />
+    </state>
+    <state x="1312" y="433" key="Vcs.Push.Dialog.v2/0.0.3440.1400@0.0.3440.1400" timestamp="1588174531732" />
+    <state x="1102" y="361" key="new project wizard" timestamp="1588174591151">
+      <screen x="0" y="0" width="3440" height="1400" />
+    </state>
+    <state x="1102" y="361" key="new project wizard/0.0.3440.1400@0.0.3440.1400" timestamp="1588174591151" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/myerp-business/src/main/java/com/dummy/myerp/business/impl/manager/ComptabiliteManagerImpl.java</url>
+          <line>234</line>
+          <option name="timeStamp" value="32" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>

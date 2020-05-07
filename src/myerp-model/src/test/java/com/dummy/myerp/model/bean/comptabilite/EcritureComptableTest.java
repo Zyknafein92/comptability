@@ -3,9 +3,9 @@ package com.dummy.myerp.model.bean.comptabilite;
 import java.math.BigDecimal;
 import java.util.Date;
 
-import org.apache.commons.lang.StringUtils;
+
 import org.apache.commons.lang3.ObjectUtils;
-import org.apache.commons.lang3.ObjectUtils;
+import org.apache.commons.lang3.StringUtils;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;

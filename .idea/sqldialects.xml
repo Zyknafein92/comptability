@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<project version="4">
-  <component name="SqlDialectMappings">
-    <file url="file://$PROJECT_DIR$/src/docker/dev/init/db/docker-entrypoint-initdb.d/01_create_schema.sql" dialect="GenericSQL" />
-    <file url="file://$PROJECT_DIR$/src/docker/dev/init/db/docker-entrypoint-initdb.d/02_create_tables.sql" dialect="GenericSQL" />
-    <file url="file://$PROJECT_DIR$/src/docker/dev/init/db/docker-entrypoint-initdb.d/21_insert_data_demo.sql" dialect="PostgreSQL" />
-  </component>
-</project>

@@ -16,6 +16,7 @@
 
     <!-- ===== Maven ===== -->
     <artifactId>myerp-technical</artifactId>
+    <packaging>jar</packaging>
 
     <!-- ===== General information ===== -->
     <name>${project.artifactId}</name>
@@ -102,8 +103,8 @@
         <!-- ========== Test Dependencies ========== -->
         <!-- ===== Tests ===== -->
         <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-engine</artifactId>
             <scope>test</scope>
         </dependency>
 
@@ -114,7 +115,7 @@
             <artifactId>hibernate-validator</artifactId>
             <scope>test</scope>
         </dependency>
-</dependencies>
+    </dependencies>
 
 
     <!-- =============================================================== -->

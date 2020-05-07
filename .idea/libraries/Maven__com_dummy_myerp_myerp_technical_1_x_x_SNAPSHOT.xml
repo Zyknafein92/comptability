@@ -1,0 +1,15 @@
+<component name="libraryTable">
+  <library name="Maven: com.dummy.myerp:myerp-technical:1.x.x-SNAPSHOT">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/dummy/myerp/myerp-technical/1.x.x-SNAPSHOT/myerp-technical-1.x.x-SNAPSHOT.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$PROJECT_DIR$/src/myerp-technical/myerp-technical-1.x.x-SNAPSHOT-javadoc.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/com/dummy/myerp/myerp-technical/1.x.x-SNAPSHOT/myerp-technical-1.x.x-SNAPSHOT-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$PROJECT_DIR$/src/myerp-technical/myerp-technical-1.x.x-SNAPSHOT-sources.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/com/dummy/myerp/myerp-technical/1.x.x-SNAPSHOT/myerp-technical-1.x.x-SNAPSHOT-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

@@ -3,21 +3,14 @@ package com.dummy.myerp.business.impl.manager;
 import java.math.BigDecimal;
 import java.util.Date;
 
-import com.dummy.myerp.consumer.dao.contrat.ComptabiliteDao;
-import com.dummy.myerp.consumer.dao.contrat.DaoProxy;
+
 import com.dummy.myerp.model.bean.comptabilite.*;
-import com.dummy.myerp.technical.exception.NotFoundException;
 import org.junit.Before;
 import org.junit.Test;
 import com.dummy.myerp.technical.exception.FunctionalException;
-import org.mockito.InjectMocks;
-import org.mockito.Mock;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.jupiter.api.Assertions.assertThrows;
-import static org.mockito.ArgumentMatchers.anyInt;
-import static org.mockito.ArgumentMatchers.anyString;
-import static org.mockito.BDDMockito.given;
-import static org.mockito.Mockito.when;
+
 
 
 public class ComptabiliteManagerImplTest {

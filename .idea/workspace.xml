@@ -7,8 +7,6 @@
       <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_dummy_myerp_myerp_technical_1_x_x_SNAPSHOT.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_test_5_2_2_RELEASE.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/.idea/p9.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/myerp-business/src/test/java/com/dummy/myerp/business/impl/manager/ComtabilititeManagangerImplIntTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/travis.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/comptability.iml" beforeDir="false" />
@@ -31,23 +29,26 @@
       <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sqldialects.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/myerp-business/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/myerp-business/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/myerp-business/src/main/java/com/dummy/myerp/business/contrat/manager/ComptabiliteManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/myerp-business/src/main/java/com/dummy/myerp/business/contrat/manager/ComptabiliteManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/myerp-business/src/main/java/com/dummy/myerp/business/impl/manager/ComptabiliteManagerImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/myerp-business/src/main/java/com/dummy/myerp/business/impl/manager/ComptabiliteManagerImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/myerp-business/src/test/java/com/dummy/myerp/business/impl/ComtabilititeManagangerImplIntTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/myerp-business/src/test/java/com/dummy/myerp/business/impl/manager/ComptabiliteManagerImplTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/myerp-business/src/test/java/com/dummy/myerp/business/impl/manager/ComptabiliteManagerImplTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/myerp-consumer/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/myerp-consumer/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/myerp-consumer/src/main/resources/com/dummy/myerp/consumer/sqlContext.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/myerp-consumer/src/main/resources/com/dummy/myerp/consumer/sqlContext.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/myerp-model/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/myerp-model/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/myerp-model/src/main/java/com/dummy/myerp/model/bean/comptabilite/EcritureComptable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/myerp-model/src/main/java/com/dummy/myerp/model/bean/comptabilite/EcritureComptable.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/myerp-model/src/test/java/com/dummy/myerp/model/bean/comptabilite/EcritureComptableTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/myerp-model/src/test/java/com/dummy/myerp/model/bean/comptabilite/EcritureComptableTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/myerp-consumer/src/test/java/com/dummy/myerp/consumer/dao/impl/cache/CompteComptableDaoCacheTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/myerp-consumer/src/test/java/com/dummy/myerp/consumer/dao/impl/cache/JournalComptableDaoCacheTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/myerp-consumer/src/test/java/com/dummy/myerp/consumer/dao/impl/db/dao/ComptabiliteDaoImplTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/myerp-consumer/src/test/java/com/dummy/myerp/consumer/dao/impl/db/dao/ComptabiliteDaoImplTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/myerp-consumer/src/test/java/com/dummy/myerp/consumer/dao/impl/db/rowmapper/comptabilite/CompteComptableRMTest.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/myerp-technical/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/myerp-technical/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/travis.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/travis.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JUnit5 Test Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -65,6 +66,8 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/src" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -78,8 +81,14 @@
     <property name="settings.editor.selected.configurable" value="reference.settings.ide.settings.uml" />
   </component>
   <component name="RecentsManager">
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="com.dummy.myerp.consumer.dao.impl.db.dao" />
+    </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="com.dummy.myerp.business.impl.manager" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Zyknafein\IdeaProjects\p9\src" />
@@ -191,12 +200,24 @@
       <workItem from="1588174547412" duration="105000" />
       <workItem from="1588174777389" duration="1921000" />
       <workItem from="1588602833259" duration="15249000" />
-      <workItem from="1588858848757" duration="2613000" />
+      <workItem from="1588858848757" duration="5788000" />
     </task>
+    <task id="LOCAL-00001" summary="Refactor POM,&#10;Add travis.yml,&#10;Refactor and add test on ComptabiliteManagerImplTest.java">
+      <created>1588862796534</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1588862796534</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="2" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Refactor POM,&#10;Add travis.yml,&#10;Refactor and add test on ComptabiliteManagerImplTest.java" />
+    <option name="LAST_COMMIT_MESSAGE" value="Refactor POM,&#10;Add travis.yml,&#10;Refactor and add test on ComptabiliteManagerImplTest.java" />
   </component>
   <component name="WindowStateProjectService">
     <state x="670" y="274" key="#Project_Structure" timestamp="1588620140306">
@@ -204,6 +225,14 @@
     </state>
     <state x="670" y="274" key="#Project_Structure/0.0.1920.1400@0.0.1920.1400" timestamp="1588620140306" />
     <state x="1200" y="274" key="#Project_Structure/0.0.3440.1400@0.0.3440.1400" timestamp="1588608581417" />
+    <state x="1312" y="358" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1588865258119">
+      <screen x="0" y="0" width="3440" height="1400" />
+    </state>
+    <state x="1312" y="358" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.3440.1400@0.0.3440.1400" timestamp="1588865258119" />
+    <state x="1439" y="502" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1588865245630">
+      <screen x="0" y="0" width="3440" height="1400" />
+    </state>
+    <state x="1439" y="502" key="#com.intellij.fileTypes.FileTypeChooser/0.0.3440.1400@0.0.3440.1400" timestamp="1588865245630" />
     <state x="1472" y="569" width="496" height="268" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1588607202596">
       <screen x="0" y="0" width="3440" height="1400" />
     </state>
@@ -212,6 +241,14 @@
       <screen x="0" y="0" width="3440" height="1400" />
     </state>
     <state x="1492" y="413" key="#index.html/0.0.3440.1400@0.0.3440.1400" timestamp="1588175680378" />
+    <state x="1078" y="268" key="CommitChangelistDialog2" timestamp="1588862795533">
+      <screen x="0" y="0" width="3440" height="1400" />
+    </state>
+    <state x="1078" y="268" key="CommitChangelistDialog2/0.0.3440.1400@0.0.3440.1400" timestamp="1588862795533" />
+    <state x="336" y="122" key="DiffContextDialog" timestamp="1588862719851">
+      <screen x="0" y="0" width="3440" height="1400" />
+    </state>
+    <state x="336" y="122" key="DiffContextDialog/0.0.3440.1400@0.0.3440.1400" timestamp="1588862719851" />
     <state x="1500" y="393" key="FileChooserDialogImpl" timestamp="1588174647612">
       <screen x="0" y="0" width="3440" height="1400" />
     </state>
@@ -269,10 +306,14 @@
     </state>
     <state x="670" y="274" key="SettingsEditor/0.0.1920.1400@0.0.1920.1400" timestamp="1588620133092" />
     <state x="1200" y="274" key="SettingsEditor/0.0.3440.1400@0.0.3440.1400" timestamp="1588174446213" />
-    <state x="1312" y="433" key="Vcs.Push.Dialog.v2" timestamp="1588174531732">
+    <state x="1312" y="433" key="Vcs.Push.Dialog.v2" timestamp="1588862807032">
       <screen x="0" y="0" width="3440" height="1400" />
     </state>
-    <state x="1312" y="433" key="Vcs.Push.Dialog.v2/0.0.3440.1400@0.0.3440.1400" timestamp="1588174531732" />
+    <state x="1312" y="433" key="Vcs.Push.Dialog.v2/0.0.3440.1400@0.0.3440.1400" timestamp="1588862807032" />
+    <state x="1449" y="384" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1588864557873">
+      <screen x="0" y="0" width="3440" height="1400" />
+    </state>
+    <state x="1449" y="384" key="com.intellij.testIntegration.createTest.CreateTestDialog/0.0.3440.1400@0.0.3440.1400" timestamp="1588864557873" />
     <state x="1102" y="361" key="new project wizard" timestamp="1588174591151">
       <screen x="0" y="0" width="3440" height="1400" />
     </state>

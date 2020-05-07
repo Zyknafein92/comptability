@@ -4,7 +4,7 @@
     <remote-repository>
       <option name="id" value="project.local" />
       <option name="name" value="project.local" />
-      <option name="url" value="file://C:\Users\Zyknafein\Desktop\p9\src\myerp-consumer/../src/lib/" />
+      <option name="url" value="file://C:\Users\Zyknafein\IdeaProjects\p9\src\myerp-technical/../src/lib/" />
     </remote-repository>
     <remote-repository>
       <option name="id" value="central" />
@@ -14,12 +14,7 @@
     <remote-repository>
       <option name="id" value="project.local" />
       <option name="name" value="project.local" />
-      <option name="url" value="file://C:\Users\Zyknafein\Desktop\p9\src\myerp-business/../src/lib/" />
-    </remote-repository>
-    <remote-repository>
-      <option name="id" value="project.local" />
-      <option name="name" value="project.local" />
-      <option name="url" value="file://C:\Users\Zyknafein\Desktop\p9\src\myerp-technical/../src/lib/" />
+      <option name="url" value="file://C:\Users\Zyknafein\IdeaProjects\p9\src/../src/lib/" />
     </remote-repository>
     <remote-repository>
       <option name="id" value="central" />
@@ -29,17 +24,22 @@
     <remote-repository>
       <option name="id" value="project.local" />
       <option name="name" value="project.local" />
-      <option name="url" value="file://C:\Users\Zyknafein\Desktop\p9\src/../src/lib/" />
+      <option name="url" value="file://C:\Users\Zyknafein\IdeaProjects\p9\src\myerp-business/../src/lib/" />
     </remote-repository>
     <remote-repository>
       <option name="id" value="project.local" />
       <option name="name" value="project.local" />
-      <option name="url" value="file://C:\Users\Zyknafein\Desktop\p9\src\myerp-model/../src/lib/" />
+      <option name="url" value="file://C:\Users\Zyknafein\IdeaProjects\p9\src\myerp-model/../src/lib/" />
     </remote-repository>
     <remote-repository>
       <option name="id" value="jboss.community" />
       <option name="name" value="JBoss Community repository" />
       <option name="url" value="https://repository.jboss.org/nexus/content/repositories/public/" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="project.local" />
+      <option name="name" value="project.local" />
+      <option name="url" value="file://C:\Users\Zyknafein\IdeaProjects\p9\src\myerp-consumer/../src/lib/" />
     </remote-repository>
   </component>
 </project>

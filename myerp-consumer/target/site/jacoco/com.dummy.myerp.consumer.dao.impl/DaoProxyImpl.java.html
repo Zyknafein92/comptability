@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="fr"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>DaoProxyImpl.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">myerp-consumer</a> &gt; <a href="index.source.html" class="el_package">com.dummy.myerp.consumer.dao.impl</a> &gt; <span class="el_source">DaoProxyImpl.java</span></div><h1>DaoProxyImpl.java</h1><pre class="source lang-java linenums">package com.dummy.myerp.consumer.dao.impl;
+
+import com.dummy.myerp.consumer.dao.contrat.ComptabiliteDao;
+import com.dummy.myerp.consumer.dao.contrat.DaoProxy;
+
+
+/**
+ * &lt;p&gt;Implémentation du Proxy d'accès à la couche DAO.&lt;/p&gt;
+ */
+public final class DaoProxyImpl implements DaoProxy {
+
+    // ==================== Attributs ====================
+    /** {@link ComptabiliteDao} */
+    private ComptabiliteDao comptabiliteDao;
+
+
+    // ==================== Constructeurs ====================
+    /** Instance unique de la classe (design pattern Singleton) */
+<span class="nc" id="L19">    private static final DaoProxyImpl INSTANCE = new DaoProxyImpl();</span>
+
+    /**
+     * Renvoie l'instance unique de la classe (design pattern Singleton).
+     *
+     * @return {@link DaoProxyImpl}
+     */
+    protected static DaoProxyImpl getInstance() {
+<span class="nc" id="L27">        return DaoProxyImpl.INSTANCE;</span>
+    }
+
+    /**
+     * Constructeur.
+     */
+    private DaoProxyImpl() {
+        super();
+    }
+
+
+    // ==================== Getters/Setters ====================
+    public ComptabiliteDao getComptabiliteDao() {
+<span class="nc" id="L40">        return this.comptabiliteDao;</span>
+    }
+    public void setComptabiliteDao(ComptabiliteDao pComptabiliteDao) {
+<span class="nc" id="L43">        this.comptabiliteDao = pComptabiliteDao;</span>
+<span class="nc" id="L44">    }</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.5.201910111838</span></div></body></html>

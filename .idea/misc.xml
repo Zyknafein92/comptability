@@ -8,7 +8,16 @@
       <list>
         <option value="$PROJECT_DIR$/src/myerp-business/pom.xml" />
         <option value="$PROJECT_DIR$/src/pom.xml" />
+        <option value="$PROJECT_DIR$/myerp-business/pom.xml" />
+        <option value="$PROJECT_DIR$/myerp-consumer/pom.xml" />
+        <option value="$PROJECT_DIR$/myerp-model/pom.xml" />
+        <option value="$PROJECT_DIR$/myerp-technical/pom.xml" />
       </list>
+    </option>
+    <option name="ignoredFiles">
+      <set>
+        <option value="$PROJECT_DIR$/src/pom.xml" />
+      </set>
     </option>
   </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="false" project-jdk-name="1.8.0_221" project-jdk-type="JavaSDK" />

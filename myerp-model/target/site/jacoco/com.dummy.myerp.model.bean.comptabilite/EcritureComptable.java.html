@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="fr"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>EcritureComptable.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">myerp-model</a> &gt; <a href="index.source.html" class="el_package">com.dummy.myerp.model.bean.comptabilite</a> &gt; <span class="el_source">EcritureComptable.java</span></div><h1>EcritureComptable.java</h1><pre class="source lang-java linenums">package com.dummy.myerp.model.bean.comptabilite;
+
+
+import java.math.BigDecimal;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
+import javax.validation.Valid;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Pattern;
+import javax.validation.constraints.Size;
+import org.apache.commons.lang3.StringUtils;
+
+
+/**
+ * Bean représentant une Écriture Comptable
+ */
+<span class="fc" id="L18">public class EcritureComptable {</span>
+
+    // ==================== Attributs ====================
+    /** The Id. */
+    private Integer id;
+    /** Journal comptable */
+    @NotNull private JournalComptable journal;
+    /** The Reference. */
+    @Pattern(regexp = &quot;\\w{2}-\\d{4}/\\d{5}&quot;)
+    private String reference;
+    /** The Date. */
+    @NotNull private Date date;
+
+    /** The Libelle. */
+    @NotNull
+    @Size(min = 1, max = 200)
+    private String libelle;
+
+    /** La liste des lignes d'écriture comptable. */
+<span class="fc" id="L37">    @Valid</span>
+    @Size(min = 2)
+    private final List&lt;LigneEcritureComptable&gt; listLigneEcriture = new ArrayList&lt;&gt;();
+
+
+    // ==================== Getters/Setters ====================
+    public Integer getId() {
+<span class="fc" id="L44">        return id;</span>
+    }
+    public void setId(Integer pId) {
+<span class="fc" id="L47">        id = pId;</span>
+<span class="fc" id="L48">    }</span>
+    public JournalComptable getJournal() {
+<span class="fc" id="L50">        return journal;</span>
+    }
+    public void setJournal(JournalComptable pJournal) {
+<span class="fc" id="L53">        journal = pJournal;</span>
+<span class="fc" id="L54">    }</span>
+    public String getReference() {
+<span class="fc" id="L56">        return reference;</span>
+    }
+    public void setReference(String pReference) {
+<span class="fc" id="L59">        reference = pReference;</span>
+<span class="fc" id="L60">    }</span>
+    public Date getDate() {
+<span class="fc" id="L62">        return date;</span>
+    }
+    public void setDate(Date pDate) {
+<span class="fc" id="L65">        date = pDate;</span>
+<span class="fc" id="L66">    }</span>
+    public String getLibelle() {
+<span class="fc" id="L68">        return libelle;</span>
+    }
+    public void setLibelle(String pLibelle) {
+<span class="fc" id="L71">        libelle = pLibelle;</span>
+<span class="fc" id="L72">    }</span>
+    public List&lt;LigneEcritureComptable&gt; getListLigneEcriture() {
+<span class="fc" id="L74">        return listLigneEcriture;</span>
+    }
+
+    /**
+     * Calcul et renvoie le total des montants au débit des lignes d'écriture
+     *
+     * @return {@link BigDecimal}, {@link BigDecimal#ZERO} si aucun montant au débit
+     */
+    // TODO à tester
+    public BigDecimal getTotalDebit() {
+<span class="fc" id="L84">        BigDecimal vRetour = BigDecimal.ZERO;</span>
+<span class="fc bfc" id="L85" title="All 2 branches covered.">        for (LigneEcritureComptable vLigneEcritureComptable : listLigneEcriture) {</span>
+<span class="fc bfc" id="L86" title="All 2 branches covered.">            if (vLigneEcritureComptable.getDebit() != null) {</span>
+<span class="fc" id="L87">                vRetour = vRetour.add(vLigneEcritureComptable.getDebit());</span>
+            }
+<span class="fc" id="L89">        }</span>
+<span class="fc" id="L90">        return vRetour;</span>
+    }
+
+    /**
+     * Calcul et renvoie le total des montants au crédit des lignes d'écriture
+     *
+     * @return {@link BigDecimal}, {@link BigDecimal#ZERO} si aucun montant au crédit
+     */
+    public BigDecimal getTotalCredit() {
+<span class="fc" id="L99">        BigDecimal vRetour = BigDecimal.ZERO;</span>
+<span class="fc bfc" id="L100" title="All 2 branches covered.">        for (LigneEcritureComptable vLigneEcritureComptable : listLigneEcriture) {</span>
+<span class="fc bfc" id="L101" title="All 2 branches covered.">            if (vLigneEcritureComptable.getCredit() != null) {</span>
+<span class="fc" id="L102">                vRetour = vRetour.add(vLigneEcritureComptable.getCredit());</span>
+            }
+<span class="fc" id="L104">        }</span>
+<span class="fc" id="L105">        return vRetour;</span>
+    }
+
+    /**
+     * Renvoie si l'écriture est équilibrée (TotalDebit = TotalCrédit)
+     * @return boolean
+     */
+    public boolean isEquilibree() {
+<span class="fc" id="L113">        return this.getTotalDebit().stripTrailingZeros().equals(getTotalCredit().stripTrailingZeros());</span>
+    }
+
+    // ==================== Méthodes ====================
+    @Override
+    public String toString() {
+<span class="fc" id="L119">        final StringBuilder vStB = new StringBuilder(this.getClass().getSimpleName());</span>
+<span class="fc" id="L120">        final String vSEP = &quot;, &quot;;</span>
+<span class="fc" id="L121">        vStB.append(&quot;{&quot;)</span>
+<span class="fc" id="L122">                .append(&quot;id=&quot;).append(id)</span>
+<span class="fc" id="L123">                .append(vSEP).append(&quot;journal=&quot;).append(journal)</span>
+<span class="fc" id="L124">                .append(vSEP).append(&quot;reference='&quot;).append(reference).append('\'')</span>
+<span class="fc" id="L125">                .append(vSEP).append(&quot;date=&quot;).append(date)</span>
+<span class="fc" id="L126">                .append(vSEP).append(&quot;libelle='&quot;).append(libelle).append('\'')</span>
+<span class="fc" id="L127">                .append(vSEP).append(&quot;totalDebit=&quot;).append(this.getTotalDebit().toPlainString())</span>
+<span class="fc" id="L128">                .append(vSEP).append(&quot;totalCredit=&quot;).append(this.getTotalCredit().toPlainString())</span>
+<span class="fc" id="L129">                .append(vSEP).append(&quot;listLigneEcriture=[\n&quot;)</span>
+<span class="fc" id="L130">                .append(StringUtils.join(listLigneEcriture, &quot;\n&quot;)).append(&quot;\n]&quot;)</span>
+<span class="fc" id="L131">                .append(&quot;}&quot;);</span>
+<span class="fc" id="L132">        return vStB.toString();</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.5.201910111838</span></div></body></html>

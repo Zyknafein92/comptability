@@ -8,8 +8,8 @@
         <outputRelativeToContentRoot value="true" />
         <module name="myerp-business" />
         <module name="myerp-consumer" />
-        <module name="myerp-technical" />
         <module name="myerp-model" />
+        <module name="myerp-technical" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>

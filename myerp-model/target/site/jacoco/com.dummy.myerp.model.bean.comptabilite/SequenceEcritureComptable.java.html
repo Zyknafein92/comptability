@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="fr"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>SequenceEcritureComptable.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">myerp-model</a> &gt; <a href="index.source.html" class="el_package">com.dummy.myerp.model.bean.comptabilite</a> &gt; <span class="el_source">SequenceEcritureComptable.java</span></div><h1>SequenceEcritureComptable.java</h1><pre class="source lang-java linenums">package com.dummy.myerp.model.bean.comptabilite;
+
+
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
+
+/**
+ * Bean représentant une séquence pour les références d'écriture comptable
+ */
+public class SequenceEcritureComptable {
+
+    // ==================== Attributs ====================
+
+
+    /**
+     * Code du journal comptable
+     */
+    @NotNull
+    @Size(max = 5)
+    private JournalComptable journalCode;
+
+    /** L'année */
+    private Integer annee;
+    /** La dernière valeur utilisée */
+    private Integer derniereValeur;
+
+    // ==================== Constructeurs ====================
+    /**
+     * Constructeur
+     */
+<span class="fc" id="L31">    public SequenceEcritureComptable() {</span>
+<span class="fc" id="L32">    }</span>
+
+    /**
+     * Constructeur
+     *
+     * @param pAnnee -
+     * @param pDerniereValeur -
+     */
+<span class="nc" id="L40">    public SequenceEcritureComptable(Integer pAnnee, Integer pDerniereValeur) {</span>
+<span class="nc" id="L41">        annee = pAnnee;</span>
+<span class="nc" id="L42">        derniereValeur = pDerniereValeur;</span>
+<span class="nc" id="L43">    }</span>
+
+<span class="nc" id="L45">    public SequenceEcritureComptable(JournalComptable pJournalCode, Integer pAnnee, Integer pDerniereValeur) {</span>
+<span class="nc" id="L46">        journalCode = pJournalCode;</span>
+<span class="nc" id="L47">        annee = pAnnee;</span>
+<span class="nc" id="L48">        derniereValeur = pDerniereValeur;</span>
+<span class="nc" id="L49">    }</span>
+
+    // ==================== Getters/Setters ====================
+    public Integer getAnnee() {
+<span class="fc" id="L53">        return annee;</span>
+    }
+    public void setAnnee(Integer pAnnee) {
+<span class="fc" id="L56">        annee = pAnnee;</span>
+<span class="fc" id="L57">    }</span>
+    public Integer getDerniereValeur() {
+<span class="fc" id="L59">        return derniereValeur;</span>
+    }
+    public void setDerniereValeur(Integer pDerniereValeur) {
+<span class="fc" id="L62">        derniereValeur = pDerniereValeur;</span>
+<span class="fc" id="L63">    }</span>
+<span class="nc" id="L64">    public JournalComptable getJournalCode() { return journalCode; }</span>
+<span class="nc" id="L65">    public void setJournalCode(JournalComptable pJournalCode) {journalCode = pJournalCode;}</span>
+
+    // ==================== Méthodes ====================
+    @Override
+    public String toString() {
+<span class="fc" id="L70">        final StringBuilder vStB = new StringBuilder(this.getClass().getSimpleName());</span>
+<span class="fc" id="L71">        final String vSEP = &quot;, &quot;;</span>
+<span class="fc" id="L72">        vStB.append(&quot;{&quot;)</span>
+<span class="fc" id="L73">                .append(&quot;annee=&quot;).append(annee)</span>
+<span class="fc" id="L74">                .append(vSEP).append(&quot;derniereValeur=&quot;).append(derniereValeur)</span>
+<span class="fc" id="L75">                .append(&quot;}&quot;);</span>
+<span class="fc" id="L76">        return vStB.toString();</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.5.201910111838</span></div></body></html>

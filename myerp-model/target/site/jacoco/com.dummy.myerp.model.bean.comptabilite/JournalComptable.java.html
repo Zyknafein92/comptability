@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="fr"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>JournalComptable.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">myerp-model</a> &gt; <a href="index.source.html" class="el_package">com.dummy.myerp.model.bean.comptabilite</a> &gt; <span class="el_source">JournalComptable.java</span></div><h1>JournalComptable.java</h1><pre class="source lang-java linenums">package com.dummy.myerp.model.bean.comptabilite;
+
+import java.util.List;
+import java.util.Objects;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
+
+
+/**
+ * Bean représentant un Journal Comptable
+ */
+public class JournalComptable {
+
+    // ==================== Attributs ====================
+    /** code */
+    @NotNull
+    @Size(min = 1, max = 5)
+    private String code;
+
+    /** libelle */
+    @NotNull
+    @Size(min = 1, max = 150)
+    private String libelle;
+
+
+    // ==================== Constructeurs ====================
+    /**
+     * Instantiates a new Journal comptable.
+     */
+<span class="fc" id="L30">    public JournalComptable() {</span>
+<span class="fc" id="L31">    }</span>
+
+    /**
+     * Instantiates a new Journal comptable.
+     *
+     * @param pCode the p code
+     * @param pLibelle the p libelle
+     */
+<span class="fc" id="L39">    public JournalComptable(String pCode, String pLibelle) {</span>
+<span class="fc" id="L40">        code = pCode;</span>
+<span class="fc" id="L41">        libelle = pLibelle;</span>
+<span class="fc" id="L42">    }</span>
+
+
+    // ==================== Getters/Setters ====================
+    public String getCode() {
+<span class="fc" id="L47">        return code;</span>
+    }
+    public void setCode(String pCode) {
+<span class="fc" id="L50">        code = pCode;</span>
+<span class="fc" id="L51">    }</span>
+    public String getLibelle() {
+<span class="fc" id="L53">        return libelle;</span>
+    }
+    public void setLibelle(String pLibelle) {
+<span class="fc" id="L56">        libelle = pLibelle;</span>
+<span class="fc" id="L57">    }</span>
+
+
+    // ==================== Méthodes ====================
+    @Override
+    public String toString() {
+<span class="fc" id="L63">        final StringBuilder vStB = new StringBuilder(this.getClass().getSimpleName());</span>
+<span class="fc" id="L64">        final String vSEP = &quot;, &quot;;</span>
+<span class="fc" id="L65">        vStB.append(&quot;{&quot;)</span>
+<span class="fc" id="L66">            .append(&quot;code='&quot;).append(code).append('\'')</span>
+<span class="fc" id="L67">            .append(vSEP).append(&quot;libelle='&quot;).append(libelle).append('\'')</span>
+<span class="fc" id="L68">            .append(&quot;}&quot;);</span>
+<span class="fc" id="L69">        return vStB.toString();</span>
+    }
+
+
+    // ==================== Méthodes STATIC ====================
+    /**
+     * Renvoie le {@link JournalComptable} de code {@code pCode} s'il est présent dans la liste
+     *
+     * @param pList la liste où chercher le {@link JournalComptable}
+     * @param pCode le code du {@link JournalComptable} à chercher
+     * @return {@link JournalComptable} ou {@code null}
+     */
+    public static JournalComptable getByCode(List&lt;? extends JournalComptable&gt; pList, String pCode) {
+<span class="fc" id="L82">        JournalComptable vRetour = null;</span>
+<span class="fc bfc" id="L83" title="All 2 branches covered.">        for (JournalComptable vBean : pList) {</span>
+<span class="pc bpc" id="L84" title="1 of 4 branches missed.">            if (vBean != null &amp;&amp; Objects.equals(vBean.getCode(), pCode)) {</span>
+<span class="fc" id="L85">                vRetour = vBean;</span>
+<span class="fc" id="L86">                break;</span>
+            }
+<span class="fc" id="L88">        }</span>
+<span class="fc" id="L89">        return vRetour;</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.5.201910111838</span></div></body></html>

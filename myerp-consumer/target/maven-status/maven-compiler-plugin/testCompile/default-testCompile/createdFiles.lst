@@ -1,0 +1,3 @@
+com\dummy\myerp\consumer\dao\impl\cache\CompteComptableDaoCacheTest.class
+com\dummy\myerp\consumer\dao\impl\db\dao\ComptabiliteDaoImplTest.class
+com\dummy\myerp\consumer\dao\impl\cache\JournalComptableDaoCacheTest.class

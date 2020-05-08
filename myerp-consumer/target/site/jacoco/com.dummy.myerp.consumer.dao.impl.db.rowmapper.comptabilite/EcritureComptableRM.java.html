@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="fr"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>EcritureComptableRM.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">myerp-consumer</a> &gt; <a href="index.source.html" class="el_package">com.dummy.myerp.consumer.dao.impl.db.rowmapper.comptabilite</a> &gt; <span class="el_source">EcritureComptableRM.java</span></div><h1>EcritureComptableRM.java</h1><pre class="source lang-java linenums">package com.dummy.myerp.consumer.dao.impl.db.rowmapper.comptabilite;
+
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
+import org.springframework.jdbc.core.RowMapper;
+import com.dummy.myerp.consumer.ConsumerHelper;
+import com.dummy.myerp.consumer.dao.impl.cache.JournalComptableDaoCache;
+import com.dummy.myerp.model.bean.comptabilite.EcritureComptable;
+
+
+/**
+ * {@link RowMapper} de {@link EcritureComptable}
+ */
+<span class="nc" id="L15">public class EcritureComptableRM implements RowMapper&lt;EcritureComptable&gt; {</span>
+
+    /** JournalComptableDaoCache */
+<span class="nc" id="L18">    private final JournalComptableDaoCache journalComptableDaoCache = new JournalComptableDaoCache();</span>
+
+
+    @Override
+    public EcritureComptable mapRow(ResultSet pRS, int pRowNum) throws SQLException {
+<span class="nc" id="L23">        EcritureComptable vBean = new EcritureComptable();</span>
+<span class="nc" id="L24">        vBean.setId(pRS.getInt(&quot;id&quot;));</span>
+<span class="nc" id="L25">        vBean.setJournal(journalComptableDaoCache.getByCode(pRS.getString(&quot;journal_code&quot;)));</span>
+<span class="nc" id="L26">        vBean.setReference(pRS.getString(&quot;reference&quot;));</span>
+<span class="nc" id="L27">        vBean.setDate(pRS.getDate(&quot;date&quot;));</span>
+<span class="nc" id="L28">        vBean.setLibelle(pRS.getString(&quot;libelle&quot;));</span>
+
+        // Chargement des lignes d'écriture
+<span class="nc" id="L31">        ConsumerHelper.getDaoProxy().getComptabiliteDao().loadListLigneEcriture(vBean);</span>
+
+<span class="nc" id="L33">        return vBean;</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.5.201910111838</span></div></body></html>

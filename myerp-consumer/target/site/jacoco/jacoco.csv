@@ -1,0 +1,14 @@
+GROUP,PACKAGE,CLASS,INSTRUCTION_MISSED,INSTRUCTION_COVERED,BRANCH_MISSED,BRANCH_COVERED,LINE_MISSED,LINE_COVERED,COMPLEXITY_MISSED,COMPLEXITY_COVERED,METHOD_MISSED,METHOD_COVERED
+myerp-consumer,com.dummy.myerp.consumer.dao.impl.cache,CompteComptableDaoCache,18,0,2,0,6,0,3,0,2,0
+myerp-consumer,com.dummy.myerp.consumer.dao.impl.cache,JournalComptableDaoCache,18,0,2,0,6,0,3,0,2,0
+myerp-consumer,com.dummy.myerp.consumer.dao.impl.db.rowmapper.comptabilite,SequenceEcritureComptableRM,21,0,0,0,5,0,2,0,2,0
+myerp-consumer,com.dummy.myerp.consumer.dao.impl.db.rowmapper.comptabilite,EcritureComptableRM,47,0,0,0,10,0,2,0,2,0
+myerp-consumer,com.dummy.myerp.consumer.dao.impl.db.rowmapper.comptabilite,JournalComptableRM,19,0,0,0,5,0,2,0,2,0
+myerp-consumer,com.dummy.myerp.consumer.dao.impl.db.rowmapper.comptabilite,LigneEcritureComptableRM,39,0,0,0,8,0,2,0,2,0
+myerp-consumer,com.dummy.myerp.consumer.dao.impl.db.rowmapper.comptabilite,CompteComptableRM,20,0,0,0,5,0,2,0,2,0
+myerp-consumer,com.dummy.myerp.consumer,ConsumerHelper,8,0,0,0,4,0,3,0,3,0
+myerp-consumer,com.dummy.myerp.consumer.db.helper,ResultSetHelper,49,0,6,0,16,0,7,0,4,0
+myerp-consumer,com.dummy.myerp.consumer.dao.impl.db.dao,ComptabiliteDaoImpl,575,0,2,0,140,0,32,0,31,0
+myerp-consumer,com.dummy.myerp.consumer.dao.impl,DaoProxyImpl,14,0,0,0,5,0,4,0,4,0
+myerp-consumer,com.dummy.myerp.consumer.db,DataSourcesEnum,14,0,0,0,2,0,1,0,1,0
+myerp-consumer,com.dummy.myerp.consumer.db,AbstractDbConsumer,111,0,8,0,22,0,10,0,6,0

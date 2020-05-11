@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/docker/docker.iml" filepath="$PROJECT_DIR$/docker/docker.iml" />
+      <module fileurl="file://$PROJECT_DIR$/myerp.iml" filepath="$PROJECT_DIR$/myerp.iml" />
       <module fileurl="file://$PROJECT_DIR$/myerp-business/myerp-business.iml" filepath="$PROJECT_DIR$/myerp-business/myerp-business.iml" />
       <module fileurl="file://$PROJECT_DIR$/myerp-consumer/myerp-consumer.iml" filepath="$PROJECT_DIR$/myerp-consumer/myerp-consumer.iml" />
       <module fileurl="file://$PROJECT_DIR$/myerp-model/myerp-model.iml" filepath="$PROJECT_DIR$/myerp-model/myerp-model.iml" />

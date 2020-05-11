@@ -18,3 +18,4 @@ script: mvn cobertura:cobertura-integration-test -Ptest-consumer,test-business
 
 after_success:
   - bash <(curl -s https://codecov.io/bash)
+

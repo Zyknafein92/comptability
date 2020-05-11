@@ -11,4 +11,4 @@ myerp-consumer,com.dummy.myerp.consumer.db.helper,ResultSetHelper,49,0,6,0,16,0,
 myerp-consumer,com.dummy.myerp.consumer.dao.impl.db.dao,ComptabiliteDaoImpl,575,0,2,0,140,0,32,0,31,0
 myerp-consumer,com.dummy.myerp.consumer.dao.impl,DaoProxyImpl,14,0,0,0,5,0,4,0,4,0
 myerp-consumer,com.dummy.myerp.consumer.db,DataSourcesEnum,14,0,0,0,2,0,1,0,1,0
-myerp-consumer,com.dummy.myerp.consumer.db,AbstractDbConsumer,111,0,8,0,22,0,10,0,6,0
+myerp-consumer,com.dummy.myerp.consumer.db,AbstractDbConsumer,104,7,8,0,19,3,8,2,4,2

@@ -1,3 +1,5 @@
+[![codecov](https://codecov.io/gh/Zyknafein92/comptability/branch/master/graph/badge.svg)](https://codecov.io/gh/Zyknafein92/comptability)
+
 # MyERP
 
 ## Organisation du répertoire

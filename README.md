@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/Zyknafein92/comptability.svg?branch=master)](https://travis-ci.org/Zyknafein92/comptability)
+
 [![codecov](https://codecov.io/gh/Zyknafein92/comptability/branch/master/graph/badge.svg)](https://codecov.io/gh/Zyknafein92/comptability)
 
 # MyERP

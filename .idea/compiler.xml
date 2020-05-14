@@ -6,18 +6,23 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="myerp-technical" />
+        <module name="myerp-model" />
         <module name="myerp-business" />
         <module name="myerp-consumer" />
-        <module name="myerp-model" />
-        <module name="myerp-technical" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="myerp" target="1.5" />
+      <module name="myerp (2)" target="1.5" />
       <module name="myerp-business" target="1.8" />
+      <module name="myerp-business (1)" target="1.8" />
       <module name="myerp-consumer" target="1.8" />
+      <module name="myerp-consumer (1)" target="1.8" />
       <module name="myerp-model" target="1.8" />
+      <module name="myerp-model (1)" target="1.8" />
       <module name="myerp-technical" target="1.8" />
+      <module name="myerp-technical (1)" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>

@@ -8,18 +8,21 @@
       <list>
         <option value="$PROJECT_DIR$/src/myerp-business/pom.xml" />
         <option value="$PROJECT_DIR$/src/pom.xml" />
-        <option value="$PROJECT_DIR$/myerp-business/pom.xml" />
-        <option value="$PROJECT_DIR$/myerp-consumer/pom.xml" />
-        <option value="$PROJECT_DIR$/myerp-model/pom.xml" />
-        <option value="$PROJECT_DIR$/myerp-technical/pom.xml" />
+        <option value="$USER_HOME$/Desktop/projet_B4_FR/src/pom.xml" />
         <option value="$PROJECT_DIR$/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">
       <set>
+        <option value="$USER_HOME$/Desktop/projet_B4_FR/src/myerp-business/pom.xml" />
+        <option value="$USER_HOME$/Desktop/projet_B4_FR/src/myerp-consumer/pom.xml" />
+        <option value="$USER_HOME$/Desktop/projet_B4_FR/src/myerp-model/pom.xml" />
+        <option value="$USER_HOME$/Desktop/projet_B4_FR/src/myerp-technical/pom.xml" />
+        <option value="$USER_HOME$/Desktop/projet_B4_FR/src/pom.xml" />
+        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/pom.xml" />
       </set>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="false" project-jdk-name="1.8.0_221" project-jdk-type="JavaSDK" />
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="false" project-jdk-name="13" project-jdk-type="JavaSDK" />
 </project>

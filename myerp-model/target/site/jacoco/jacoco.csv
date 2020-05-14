@@ -1,6 +1,0 @@
-GROUP,PACKAGE,CLASS,INSTRUCTION_MISSED,INSTRUCTION_COVERED,BRANCH_MISSED,BRANCH_COVERED,LINE_MISSED,LINE_COVERED,COMPLEXITY_MISSED,COMPLEXITY_COVERED,METHOD_MISSED,METHOD_COVERED
-myerp-model,com.dummy.myerp.model.bean.comptabilite,LigneEcritureComptable,19,73,0,0,10,19,5,6,5,6
-myerp-model,com.dummy.myerp.model.bean.comptabilite,JournalComptable,0,85,1,5,0,26,1,10,0,8
-myerp-model,com.dummy.myerp.model.bean.comptabilite,SequenceEcritureComptable,28,47,0,0,11,15,4,6,4,6
-myerp-model,com.dummy.myerp.model.bean.comptabilite,EcritureComptable,0,184,0,8,0,45,0,20,0,16
-myerp-model,com.dummy.myerp.model.bean.comptabilite,CompteComptable,8,81,1,5,4,25,3,9,2,7

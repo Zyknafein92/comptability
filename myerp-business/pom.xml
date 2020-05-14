@@ -117,12 +117,8 @@
             <artifactId>mockito-junit-jupiter</artifactId>
         </dependency>
 
-        <!-- ===== Coverage ===== -->
-        <dependency>
-            <groupId>org.jacoco</groupId>
-            <artifactId>jacoco-maven-plugin</artifactId>
-            <version>0.8.5</version>
-        </dependency>
+
+
 
         <!-- ===== Database (pour les tests) ===== -->
         <!-- Pool de connexion -->
@@ -195,25 +191,6 @@
                         <goals>
                             <goal>integration-test</goal>
                             <goal>verify</goal>
-                        </goals>
-                    </execution>
-                </executions>
-            </plugin>
-            <plugin>
-                <groupId>org.jacoco</groupId>
-                <artifactId>jacoco-maven-plugin</artifactId>
-                <version>0.8.5</version>
-                <executions>
-                    <execution>
-                        <goals>
-                            <goal>prepare-agent</goal>
-                        </goals>
-                    </execution>
-                    <execution>
-                        <id>report</id>
-                        <phase>test</phase>
-                        <goals>
-                            <goal>report</goal>
                         </goals>
                     </execution>
                 </executions>

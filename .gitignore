@@ -1,1 +1,13 @@
-/.idea/
+/target
+/*-*/target
+
+/.settings
+/.project
+/*-*/.project
+/*-*/.settings
+/*-*/.classpath
+/*-*/.checkstyle
+/*-*/.springBeans
+
+/.idea
+*.iml

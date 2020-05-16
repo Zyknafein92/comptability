@@ -109,24 +109,24 @@ public class ComptabiliteDaoImplTest extends AbstractDbConsumer {
         assertThrows(Exception.class, () -> comptabiliteDao.insertEcritureComptable(ecritureComptable));
     }
 
-    @Test
-    void updateEcritureComptable() {
-    }
-
-    @Test
-    void deleteEcritureComptable() {
-    }
-
-    /* LigneEcritureComptable */
-
-    @Test
-    void insertListLigneEcritureComptable() {
-
-    }
-
-    @Test
-    void deleteListLigneEcritureComptable() {
-    }
+//    @Test
+//    void updateEcritureComptable() {
+//    }
+//
+//    @Test
+//    void deleteEcritureComptable() {
+//    }
+//
+//    /* LigneEcritureComptable */
+//
+//    @Test
+//    void insertListLigneEcritureComptable() {
+//
+//    }
+//
+//    @Test
+//    void deleteListLigneEcritureComptable() {
+//    }
 
     /* SequenceEcritureComptable */
 
@@ -157,8 +157,8 @@ public class ComptabiliteDaoImplTest extends AbstractDbConsumer {
 //        //Then
 //        assertThrows(FunctionalException.class, () -> comptabiliteDao.insertSequenceEcritureComptable(sequenceEcritureComptable));
 //    }
-
-    @Test
-    void updateSequenceEcritureComptable() {
-    }
+//
+//    @Test
+//    void updateSequenceEcritureComptable() {
+//    }
 }

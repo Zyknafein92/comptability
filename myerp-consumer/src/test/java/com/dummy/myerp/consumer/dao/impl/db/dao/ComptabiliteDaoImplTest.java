@@ -5,11 +5,9 @@ import com.dummy.myerp.consumer.db.AbstractDbConsumer;
 import com.dummy.myerp.model.bean.comptabilite.EcritureComptable;
 import com.dummy.myerp.model.bean.comptabilite.JournalComptable;
 import com.dummy.myerp.model.bean.comptabilite.SequenceEcritureComptable;
-import com.dummy.myerp.technical.exception.FunctionalException;
 import com.dummy.myerp.technical.exception.NotFoundException;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.test.context.junit.jupiter.SpringJUnitConfig;
 
 import java.util.Date;
@@ -18,7 +16,6 @@ import java.util.List;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertNotNull;
-import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
 
@@ -109,24 +106,24 @@ public class ComptabiliteDaoImplTest extends AbstractDbConsumer {
         assertThrows(Exception.class, () -> comptabiliteDao.insertEcritureComptable(ecritureComptable));
     }
 
-//    @Test
-//    void updateEcritureComptable() {
-//    }
-//
-//    @Test
-//    void deleteEcritureComptable() {
-//    }
-//
-//    /* LigneEcritureComptable */
-//
-//    @Test
-//    void insertListLigneEcritureComptable() {
-//
-//    }
-//
-//    @Test
-//    void deleteListLigneEcritureComptable() {
-//    }
+    @Test
+    void updateEcritureComptable() {
+    }
+
+    @Test
+    void deleteEcritureComptable() {
+    }
+
+    /* LigneEcritureComptable */
+
+    @Test
+    void insertListLigneEcritureComptable() {
+
+    }
+
+    @Test
+    void deleteListLigneEcritureComptable() {
+    }
 
     /* SequenceEcritureComptable */
 

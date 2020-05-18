@@ -19,8 +19,7 @@ import static org.junit.Assert.assertNotNull;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
 
-@SpringJUnitConfig(locations = {
-        "classpath:bootstrapContext.xml"})
+@SpringJUnitConfig(locations = {"classpath:bootstrapContext.xml"})
 
 public class ComptabiliteDaoImplTest extends AbstractDbConsumer {
 
@@ -33,7 +32,6 @@ public class ComptabiliteDaoImplTest extends AbstractDbConsumer {
     void testGetListCompteComptableShouldReturnListNotEmpty() {
         assertThat(comptabiliteDao.getListCompteComptable().isEmpty()).isFalse();
     }
-
 
     /* Journal */
 
@@ -107,22 +105,24 @@ public class ComptabiliteDaoImplTest extends AbstractDbConsumer {
     }
 
     @Test
-    void updateEcritureComptable() {
+    void testUpdateEcritureComptableGivenNewValueReturnEcritureComptable() throws NotFoundException {
+        EcritureComptable ecritureComptable = comptabiliteDao.getEcritureComptable(-1);
+        ecritureComptable.setLibelle("Test");
+
+        comptabiliteDao.updateEcritureComptable(ecritureComptable);
+
+        EcritureComptable ecritureComptableTest = comptabiliteDao.getEcritureComptable(-1);
+
+        assertThat(ecritureComptableTest.getLibelle()).isEqualTo("Test");
     }
 
     @Test
-    void deleteEcritureComptable() {
-    }
+    void testdeleteEcritureComptableGivenIDShouldReturnListLessOne() {
+       int listEcritureComptableSize = comptabiliteDao.getListEcritureComptable().size();
 
-    /* LigneEcritureComptable */
+       comptabiliteDao.deleteEcritureComptable(-1);
 
-    @Test
-    void insertListLigneEcritureComptable() {
-
-    }
-
-    @Test
-    void deleteListLigneEcritureComptable() {
+       assertThat(listEcritureComptableSize - 1).isEqualTo(comptabiliteDao.getListEcritureComptable().size());
     }
 
     /* SequenceEcritureComptable */
@@ -139,23 +139,36 @@ public class ComptabiliteDaoImplTest extends AbstractDbConsumer {
     }
 
 //    @Test
-//    void testInsertSequenceEcritureComptableGivenValidValueReturnSequenceEcritureComptable() {
+//    void testInsertSequenceEcritureComptableGivenValidValueReturnSequenceEcritureComptable() throws NotFoundException {
+//        //Given
+//        SequenceEcritureComptable sequenceEcritureComptable = comptabiliteDao.getSequenceEcritureComptable("AC", 2016);
+//        List<JournalComptable> listJournalComptable = comptabiliteDao.getListJournalComptable();
+//        JournalComptable journalComptable = listJournalComptable.get(0);
+//        sequenceEcritureComptable.setJournalCode(journalComptable);
 //
+//        //When
+//        comptabiliteDao.insertSequenceEcritureComptable(sequenceEcritureComptable);
+//
+//        //Then
+//        assertThat(comptabiliteDao.getSequenceEcritureComptable("AC", 2015)).isEqualTo(sequenceEcritureComptable);
 //    }
 //
 //    @Test
 //    void testInsertSequenceEcritureComptableGivenInvalidValueReturnException() throws NotFoundException {
 //        //Given
 //        SequenceEcritureComptable sequenceEcritureComptable = comptabiliteDao.getSequenceEcritureComptable("AC", 2016);
+//        List<JournalComptable> listJournalComptable = comptabiliteDao.getListJournalComptable();
+//        JournalComptable journalComptable = listJournalComptable.get(0);
+//        sequenceEcritureComptable.setJournalCode(journalComptable);
 //
 //        //When
 //        comptabiliteDao.insertSequenceEcritureComptable(sequenceEcritureComptable);
 //
 //        //Then
-//        assertThrows(FunctionalException.class, () -> comptabiliteDao.insertSequenceEcritureComptable(sequenceEcritureComptable));
+//        assertThrows(Exception.class, () -> comptabiliteDao.insertSequenceEcritureComptable(sequenceEcritureComptable));
 //    }
-//
-//    @Test
-//    void updateSequenceEcritureComptable() {
-//    }
+
+    @Test
+    void updateSequenceEcritureComptable() {
+    }
 }

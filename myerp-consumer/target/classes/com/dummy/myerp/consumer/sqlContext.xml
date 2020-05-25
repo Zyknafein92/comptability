@@ -90,27 +90,30 @@
                     id = :id
             </value>
         </property>
+
         <property name="SQLupdateSequenceEcritureComptable">
             <value>
                 UPDATE myerp.sequence_ecriture_comptable SET
                 annee = :annee,
                 derniere_valeur = :derniere_valeur,
-                WHERE
                 journal_code = :journal_code,
             </value>
         </property>
+
         <property name="SQLdeleteEcritureComptable">
             <value>
                 DELETE FROM myerp.ecriture_comptable
                 WHERE id = :id
             </value>
         </property>
+
         <property name="SQLdeleteListLigneEcritureComptable">
             <value>
                 DELETE FROM myerp.ligne_ecriture_comptable
                 WHERE ecriture_id = :ecriture_id
             </value>
         </property>
+
     </bean>
 
 </beans>

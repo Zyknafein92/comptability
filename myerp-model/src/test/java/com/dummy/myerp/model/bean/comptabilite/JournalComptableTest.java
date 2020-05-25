@@ -37,19 +37,19 @@ public class JournalComptableTest {
     }
 
     @Test
-    public void getByCode_givenNullCode_ReturnNull() {
+    public void getByCode_GivenNullCode_ReturnNull() {
         JournalComptable expected = JournalComptable.getByCode(test,null);
         assertNull(expected);
     }
 
     @Test
-    public void getByCode_givenCode_ReturnCode() {
+    public void getByCode_GivenCode_ReturnCode() {
         JournalComptable expected = JournalComptable.getByCode(test,"test1");
         assertThat(expected).isEqualTo(test.get(0));
     }
 
     @Test
-    public void getByCode_givenWrongCode_ReturnNull(){
+    public void getByCode_GivenWrongCode_ReturnNull(){
         JournalComptable expected = JournalComptable.getByCode(test,"test3");
         assertThat(expected).isNull();
     }

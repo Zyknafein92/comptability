@@ -8,7 +8,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 import static org.assertj.core.api.Assertions.assertThat;
-import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNull;
 
 
@@ -33,19 +32,19 @@ public class CompteComptableTest {
     }
 
     @Test
-    public void getByNumero_givenNull_ReturnNull() {
+    public void getByNumero_GivenNull_ReturnNull() {
         CompteComptable expected = CompteComptable.getByNumero(listCompte, null);
         assertNull(expected);
     }
 
     @Test
-    public void getByNumero_givenNumero_ReturnCompte() {
+    public void getByNumero_GivenNumero_ReturnCompte() {
         CompteComptable expected = CompteComptable.getByNumero(listCompte, 2);
         assertThat(expected).isEqualTo(listCompte.get(1));
     }
 
     @Test
-    public void getByNumero_givenWrongNumber_ReturnNull() {
+    public void getByNumero_GivenWrongNumber_ReturnNull() {
         CompteComptable expected = CompteComptable.getByNumero(listCompte, 3);
         assertThat(expected).isNull();
     }

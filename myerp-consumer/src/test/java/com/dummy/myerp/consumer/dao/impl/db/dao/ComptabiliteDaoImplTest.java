@@ -29,14 +29,14 @@ public class ComptabiliteDaoImplTest extends AbstractDbConsumer {
     /* CompteComptable */
 
     @Test
-    void testGetListCompteComptableShouldReturnListNotEmpty() {
+    void testGetListCompteComptable_ShouldReturnListNotEmpty() {
         assertThat(comptabiliteDao.getListCompteComptable().isEmpty()).isFalse();
     }
 
     /* Journal */
 
     @Test
-    void testGetListJournalComptableShouldReturnListNotEmpty() {
+    void testGetListJournalComptable_ShouldReturnListNotEmpty() {
         List<JournalComptable> listJournal = comptabiliteDao.getListJournalComptable();
         assertFalse(listJournal.isEmpty());
     }
@@ -44,35 +44,35 @@ public class ComptabiliteDaoImplTest extends AbstractDbConsumer {
     /* Ecriture Comptable */
 
     @Test
-    void testGetListEcritureComptableShouldReturnListNotEmpty() {
+    void testGetListEcritureComptable_ShouldReturnListNotEmpty() {
         List<EcritureComptable> listEcritureComptable = comptabiliteDao.getListEcritureComptable();
         assertFalse(listEcritureComptable.isEmpty());
     }
 
     @Test
-    void testGetEcritureComptableGivenIDReturnNotNull() throws NotFoundException {
+    void testGetEcritureComptable_GivenID_ReturnNotNull() throws NotFoundException {
         EcritureComptable ecritureComptable = comptabiliteDao.getEcritureComptable(-2);
         assertNotNull(ecritureComptable);
     }
 
     @Test
-    void testGetEcritureComptableGivenWrongIDReturnException() throws NotFoundException {
+    void testGetEcritureComptable_GivenWrongID_ReturnException() throws NotFoundException {
         assertThrows(NotFoundException.class, () -> comptabiliteDao.getEcritureComptable(2));
     }
 
     @Test
-    void testGetEcritureComptableByRefGivenRefReturnEcritureComptable() throws NotFoundException {
+    void testGetEcritureComptableByRef_GivenRef_ReturnEcritureComptable() throws NotFoundException {
         EcritureComptable ecritureComptable = comptabiliteDao.getEcritureComptableByRef("AC-2016/00001");
         assertNotNull(ecritureComptable);
     }
 
     @Test
-    void testGetEcritureComptableByRefGivenWrongRefReturnException() throws NotFoundException {
+    void testGetEcritureComptableByRef_GivenWrongRef_ReturnException() throws NotFoundException {
         assertThrows(NotFoundException.class, () -> comptabiliteDao.getEcritureComptableByRef("AC-1016/00001"));
     }
 
     @Test
-    void testInsertEcritureComptableGivenValidInsertReturnNotNull() {
+    void testInsertEcritureComptable_GivenValidInsert_ReturnNotNull() {
         //Given
         EcritureComptable ecritureComptable = new EcritureComptable();
         ecritureComptable.setLibelle("test");
@@ -96,7 +96,7 @@ public class ComptabiliteDaoImplTest extends AbstractDbConsumer {
     }
 
     @Test
-    void testInsertEcritureComptableGivenInvalidInsertReturnException() {
+    void testInsertEcritureComptable_GivenInvalidInsert_ReturnException() {
         EcritureComptable ecritureComptable = new EcritureComptable();
         JournalComptable journal = new JournalComptable();
         ecritureComptable.setJournal(journal);
@@ -105,7 +105,7 @@ public class ComptabiliteDaoImplTest extends AbstractDbConsumer {
     }
 
     @Test
-    void testUpdateEcritureComptableGivenNewValueReturnEcritureComptable() throws NotFoundException {
+    void testUpdateEcritureComptable_GivenNewValue_ReturnEcritureComptable() throws NotFoundException {
         EcritureComptable ecritureComptable = comptabiliteDao.getEcritureComptable(-1);
         ecritureComptable.setLibelle("Test");
 
@@ -117,7 +117,7 @@ public class ComptabiliteDaoImplTest extends AbstractDbConsumer {
     }
 
     @Test
-    void testdeleteEcritureComptableGivenIDShouldReturnListLessOne() {
+    void testDeleteEcritureComptable_GivenID_ReturnListLessOne() {
        int listEcritureComptableSize = comptabiliteDao.getListEcritureComptable().size();
 
        comptabiliteDao.deleteEcritureComptable(-1);
@@ -128,47 +128,13 @@ public class ComptabiliteDaoImplTest extends AbstractDbConsumer {
     /* SequenceEcritureComptable */
 
     @Test
-    void testGetSequenceEcritureComptableGivenValidValueReturnSequenceEcritureComptable() throws NotFoundException {
+    void testGetSequenceEcritureComptable_GivenValidValue_ReturnSequenceEcritureComptable() throws NotFoundException {
         SequenceEcritureComptable sequenceEcritureComptable = comptabiliteDao.getSequenceEcritureComptable("AC",2016);
         assertThat(sequenceEcritureComptable).isNotNull();
     }
 
     @Test
-    void testGetSequenceEcritureComptableGivenInvalidValueReturnNotFound() throws NotFoundException {
+    void testGetSequenceEcritureComptable_GivenInvalidValue_ReturnNotFound() throws NotFoundException {
         assertThrows(NotFoundException.class,() -> comptabiliteDao.getSequenceEcritureComptable("TEST",2020));
-    }
-
-//    @Test
-//    void testInsertSequenceEcritureComptableGivenValidValueReturnSequenceEcritureComptable() throws NotFoundException {
-//        //Given
-//        SequenceEcritureComptable sequenceEcritureComptable = comptabiliteDao.getSequenceEcritureComptable("AC", 2016);
-//        List<JournalComptable> listJournalComptable = comptabiliteDao.getListJournalComptable();
-//        JournalComptable journalComptable = listJournalComptable.get(0);
-//        sequenceEcritureComptable.setJournalCode(journalComptable);
-//
-//        //When
-//        comptabiliteDao.insertSequenceEcritureComptable(sequenceEcritureComptable);
-//
-//        //Then
-//        assertThat(comptabiliteDao.getSequenceEcritureComptable("AC", 2015)).isEqualTo(sequenceEcritureComptable);
-//    }
-//
-//    @Test
-//    void testInsertSequenceEcritureComptableGivenInvalidValueReturnException() throws NotFoundException {
-//        //Given
-//        SequenceEcritureComptable sequenceEcritureComptable = comptabiliteDao.getSequenceEcritureComptable("AC", 2016);
-//        List<JournalComptable> listJournalComptable = comptabiliteDao.getListJournalComptable();
-//        JournalComptable journalComptable = listJournalComptable.get(0);
-//        sequenceEcritureComptable.setJournalCode(journalComptable);
-//
-//        //When
-//        comptabiliteDao.insertSequenceEcritureComptable(sequenceEcritureComptable);
-//
-//        //Then
-//        assertThrows(Exception.class, () -> comptabiliteDao.insertSequenceEcritureComptable(sequenceEcritureComptable));
-//    }
-
-    @Test
-    void updateSequenceEcritureComptable() {
     }
 }

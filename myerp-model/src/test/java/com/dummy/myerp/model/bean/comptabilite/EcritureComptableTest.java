@@ -1,15 +1,13 @@
 package com.dummy.myerp.model.bean.comptabilite;
 
-import java.math.BigDecimal;
-import java.util.Date;
-
-
 import org.apache.commons.lang3.ObjectUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
+import java.math.BigDecimal;
+import java.util.Date;
 
 import static org.junit.Assert.assertEquals;
 
@@ -64,19 +62,19 @@ public class EcritureComptableTest {
      **/
 
     @Test
-    public void testGetTotalDebitEmptyOrNoIncomeDebitReturnZero () {
+    public void testGetTotalDebit_GivenEmptyOrNoIncome_DebitReturnZero () {
         vEcriture.getListLigneEcriture().add(this.createLigne(1,null,null));
         assertEquals(BigDecimal.valueOf(0), vEcriture.getTotalDebit());
     }
 
     @Test
-    public void testGetTotalDebitOneDebitReturnDebit () {
+    public void testGetTotalDebit_GivenOneDebit_ReturnDebit () {
         vEcriture.getListLigneEcriture().add(this.createLigne(1,"10.04",null));
         assertEquals(BigDecimal.valueOf(10.04), vEcriture.getTotalDebit());
     }
 
     @Test
-    public void testGetTotalDebitMultipleDebitReturnDebit () {
+    public void testGetTotalDebit_GivenMultipleDebit_ReturnDebit () {
         vEcriture.getListLigneEcriture().add(this.createLigne(1,"10",null));
         vEcriture.getListLigneEcriture().add(this.createLigne(1,"100",null));
         vEcriture.getListLigneEcriture().add(this.createLigne(1,"200",null));
@@ -88,7 +86,7 @@ public class EcritureComptableTest {
      **/
 
     @Test
-    public void testGetTotalCreditEmptyOrNoIncomeCreditReturnZero () {
+    public void testGetTotalCredit_GivenEmptyOrNoIncomeCredit_ReturnZero () {
         vEcriture.getListLigneEcriture().add(this.createLigne(1,null,null));
         assertEquals(BigDecimal.valueOf(0), vEcriture.getTotalCredit());
         vEcriture.getListLigneEcriture().add(this.createLigne(1,"0",null));
@@ -96,13 +94,13 @@ public class EcritureComptableTest {
     }
 
     @Test
-    public void testGetTotalCreditOneCreditReturnCrebit () {
+    public void testGetTotalCredit_GivenOneCredit_ReturnCrebit () {
         vEcriture.getListLigneEcriture().add(this.createLigne(1,null ,"20"));
         assertEquals(BigDecimal.valueOf(20), vEcriture.getTotalCredit());
     }
 
     @Test
-    public void testGetTotalCreditMultipleCreditReturnCrebit () {
+    public void testGetTotalCredit_GivenMultipleCredit_ReturnCrebit () {
         vEcriture.getListLigneEcriture().add(this.createLigne(1,null,"30"));
         vEcriture.getListLigneEcriture().add(this.createLigne(1,null,"100.11"));
         vEcriture.getListLigneEcriture().add(this.createLigne(1,null,"70"));

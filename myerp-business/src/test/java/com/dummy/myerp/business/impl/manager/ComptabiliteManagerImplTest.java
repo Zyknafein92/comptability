@@ -1,16 +1,18 @@
 package com.dummy.myerp.business.impl.manager;
 
+import com.dummy.myerp.model.bean.comptabilite.CompteComptable;
+import com.dummy.myerp.model.bean.comptabilite.EcritureComptable;
+import com.dummy.myerp.model.bean.comptabilite.JournalComptable;
+import com.dummy.myerp.model.bean.comptabilite.LigneEcritureComptable;
+import com.dummy.myerp.technical.exception.FunctionalException;
+import org.junit.Before;
+import org.junit.Test;
+
 import java.math.BigDecimal;
 import java.util.Date;
 
-
-import com.dummy.myerp.model.bean.comptabilite.*;
-import org.junit.Before;
-import org.junit.Test;
-import com.dummy.myerp.technical.exception.FunctionalException;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.jupiter.api.Assertions.assertThrows;
-
 
 
 public class ComptabiliteManagerImplTest {
@@ -37,7 +39,7 @@ public class ComptabiliteManagerImplTest {
     */
 
     @Test
-    public void testcheckEcritureComptableUnitariesInvalidFormReturnFunctionnalError() {
+    public void testcheckEcritureComptableUnit_GivenInvalidForm_ReturnFunctionnalError() {
         EcritureComptable vEcritureComptable = new EcritureComptable();
 
         FunctionalException functionalException = assertThrows(FunctionalException.class,
@@ -47,7 +49,8 @@ public class ComptabiliteManagerImplTest {
                 .isEqualTo("L'écriture comptable ne respecte pas les règles de gestion.");
     }
 
-    @Test public void testCheckEcritureComptableUnitInvalidLibelleReturnFunctionnalError() {
+    @Test
+    public void testCheckEcritureComptableUnit_GivenInvalidLibelle_ReturnFunctionnalError() {
         vEcritureComptable.setLibelle("");
 
         FunctionalException functionalException = assertThrows(FunctionalException.class,
@@ -58,7 +61,7 @@ public class ComptabiliteManagerImplTest {
     }
 
     @Test
-    public void testcheckEcritureComptableUnitRG2ReturnFunctionnalError() {
+    public void testCheckEcritureComptable_GivenInvalidUnitRG2_ReturnFunctionnalError() {
 
         vEcritureComptable.getListLigneEcriture().add(new LigneEcritureComptable(new CompteComptable(1),
                 null, new BigDecimal(223), null));
@@ -74,7 +77,7 @@ public class ComptabiliteManagerImplTest {
     }
 
     @Test
-    public void testcheckEcritureComptableUnitRG3ReturnFunctionnalError() {
+    public void testCheckEcritureComptableUnitRG3_GivenTwoCreditsNoDebit_ReturnFunctionnalError() {
         vEcritureComptable.getListLigneEcriture().add(new LigneEcritureComptable(new CompteComptable(1),
                 null,  null,
                 new BigDecimal(120)));
@@ -90,7 +93,7 @@ public class ComptabiliteManagerImplTest {
     }
 
     @Test
-    public void testcheckEcritureComptableUnitRG5BadJournalCodeReturnFunctionnalError() {
+    public void testCheckEcritureComptableUnitRG5_GivenBadJournalCode_ReturnFunctionnalError() {
         vEcritureComptable.setReference("BQ-2020/00001");
         vEcritureComptable.getListLigneEcriture().add(new LigneEcritureComptable(new CompteComptable(1),
                 null, new BigDecimal(453), null));
@@ -106,7 +109,7 @@ public class ComptabiliteManagerImplTest {
     }
 
     @Test
-    public void testcheckEcritureComptableUnitRG5BadYearReturnFunctionnalError() {
+    public void testCheckEcritureComptableUnitRG5_GivenBadYear_ReturnFunctionnalError() {
         vEcritureComptable.setReference("AC-2022/00001");
         vEcritureComptable.getListLigneEcriture().add(new LigneEcritureComptable(new CompteComptable(1),
                 null, new BigDecimal(453), null));
@@ -121,7 +124,7 @@ public class ComptabiliteManagerImplTest {
     }
 
     @Test
-    public void testcheckEcritureComptableUnitRG5NullValueReturnFunctionnalError() {
+    public void testCheckEcritureComptableUnitRG5_GivenNullValue_ReturnFunctionnalError() {
         vEcritureComptable.setReference(null);
         vEcritureComptable.getListLigneEcriture().add(new LigneEcritureComptable(new CompteComptable(1),
                 null, new BigDecimal(453), null));

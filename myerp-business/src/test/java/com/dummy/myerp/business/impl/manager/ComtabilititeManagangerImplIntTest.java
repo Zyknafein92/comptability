@@ -10,11 +10,8 @@ import com.dummy.myerp.technical.exception.NotFoundException;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.mockito.InjectMocks;
 import org.mockito.Mock;
-import org.mockito.junit.MockitoJUnit;
 import org.mockito.junit.MockitoJUnitRunner;
-import org.mockito.stubbing.Answer;
 import org.springframework.transaction.TransactionStatus;
 
 import java.math.BigDecimal;
@@ -23,7 +20,6 @@ import java.util.Date;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.mockito.BDDMockito.given;
-import static org.mockito.BDDMockito.then;
 import static org.mockito.Mockito.*;
 
 @RunWith(MockitoJUnitRunner.class)
@@ -71,7 +67,7 @@ public class ComtabilititeManagangerImplIntTest {
     */
 
     @Test
-    public void testAddReferenceNotExistReturnNew() throws Exception {
+    public void testAddReference_GivenNew_ReturnNew() throws Exception {
         when(comptabiliteDao.getSequenceEcritureComptable(vEcritureComptable.getJournal().getCode(), vEcritureComptable.getDate().getYear()))
                 .thenReturn(null);
 
@@ -82,7 +78,7 @@ public class ComtabilititeManagangerImplIntTest {
     }
 
     @Test
-    public void testAddReferenceExistReturnUpdateValue() throws Exception {
+    public void testAddReference_GivenExistingValue_ReturnUpdateValue() throws Exception {
         JournalComptable pJournal = new JournalComptable("AC", "Achat");
         SequenceEcritureComptable vSequenceEcritureComptable = new SequenceEcritureComptable(pJournal,2020, 00001);
 
@@ -100,7 +96,7 @@ public class ComtabilititeManagangerImplIntTest {
      */
 
     @Test
-    public void testcheckEcritureComptableWithValidValueShouldPass() throws FunctionalException, NotFoundException {
+    public void testCheckEcritureComptable_GivenValidValue_ReturnValid() throws FunctionalException, NotFoundException {
         vEcritureComptable.setId(1);
         SequenceEcritureComptable sequenceEcritureComptable = new SequenceEcritureComptable(
                 vEcritureComptable.getJournal(),2020,1);
@@ -117,7 +113,7 @@ public class ComtabilititeManagangerImplIntTest {
      */
 
     @Test
-    public void testCheckEcritureComptableUnitRG5BadSequenceValueReturnFunctionnalError() throws NotFoundException {
+    public void testCheckEcritureComptableUnitRG5_GivenBadSequenceValue_ReturnFunctionnalError() throws NotFoundException {
         vEcritureComptable.setReference("AC-2020/00005");
 
         SequenceEcritureComptable sequenceEcritureComptable = new SequenceEcritureComptable(
@@ -141,7 +137,7 @@ public class ComtabilititeManagangerImplIntTest {
      */
 
     @Test
-    public void testCheckEcritureComptableContextRG6NewRefReturnFunctionalError() throws NotFoundException {
+    public void testCheckEcritureComptableContextRG6_GivenNewRef_ReturnFunctionalError() throws NotFoundException {
         // id == null de base
         given(comptabiliteDao.getEcritureComptableByRef(anyString())).willReturn(vEcritureComptable);
 
@@ -153,7 +149,7 @@ public class ComtabilititeManagangerImplIntTest {
     }
 
     @Test
-    public void testCheckEcritureComptableContextRG6ExistingRefReturnFunctionalError() throws NotFoundException, FunctionalException {
+    public void testCheckEcritureComptableContextRG6_GivenExistingRef_ReturnFunctionalError() throws NotFoundException, FunctionalException {
         vEcritureComptable.setId(1);
 
         EcritureComptable testEcritureComptable = new EcritureComptable();

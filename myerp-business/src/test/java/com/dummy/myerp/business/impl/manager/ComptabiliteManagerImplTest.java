@@ -61,7 +61,7 @@ public class ComptabiliteManagerImplTest {
     }
 
     @Test
-    public void testCheckEcritureComptable_GivenInvalidUnitRG2_ReturnFunctionnalError() {
+    public void testCheckEcritureComptableUnitRG2_GivenNotBalanceEcritureComptable_ReturnFunctionnalError() {
 
         vEcritureComptable.getListLigneEcriture().add(new LigneEcritureComptable(new CompteComptable(1),
                 null, new BigDecimal(223), null));
@@ -124,7 +124,7 @@ public class ComptabiliteManagerImplTest {
     }
 
     @Test
-    public void testCheckEcritureComptableUnitRG5_GivenNullValue_ReturnFunctionnalError() {
+    public void testCheckEcritureComptableUnitRG5_GivenNullReferenceValue_ReturnFunctionnalError() {
         vEcritureComptable.setReference(null);
         vEcritureComptable.getListLigneEcriture().add(new LigneEcritureComptable(new CompteComptable(1),
                 null, new BigDecimal(453), null));

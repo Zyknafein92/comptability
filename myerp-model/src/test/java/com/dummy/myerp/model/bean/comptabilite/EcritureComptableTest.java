@@ -89,6 +89,7 @@ public class EcritureComptableTest {
     public void testGetTotalCredit_GivenEmptyOrNoIncomeCredit_ReturnZero () {
         vEcriture.getListLigneEcriture().add(this.createLigne(1,null,null));
         assertEquals(BigDecimal.valueOf(0), vEcriture.getTotalCredit());
+
         vEcriture.getListLigneEcriture().add(this.createLigne(1,"0",null));
         assertEquals(BigDecimal.valueOf(0), vEcriture.getTotalCredit());
     }

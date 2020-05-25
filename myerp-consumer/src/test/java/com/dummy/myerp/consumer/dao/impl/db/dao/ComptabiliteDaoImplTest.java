@@ -106,21 +106,21 @@ public class ComptabiliteDaoImplTest extends AbstractDbConsumer {
 
     @Test
     void testUpdateEcritureComptable_GivenNewValue_ReturnEcritureComptable() throws NotFoundException {
-        EcritureComptable ecritureComptable = comptabiliteDao.getEcritureComptable(-1);
+        EcritureComptable ecritureComptable = comptabiliteDao.getEcritureComptable(-2);
         ecritureComptable.setLibelle("Test");
 
         comptabiliteDao.updateEcritureComptable(ecritureComptable);
 
-        EcritureComptable ecritureComptableTest = comptabiliteDao.getEcritureComptable(-1);
+        EcritureComptable ecritureComptableTest = comptabiliteDao.getEcritureComptable(-2);
 
         assertThat(ecritureComptableTest.getLibelle()).isEqualTo("Test");
     }
 
     @Test
-    void testDeleteEcritureComptable_GivenID_ReturnListLessOne() {
+    void testDeleteEcritureComptable_GivenID_ReturnListLessOne() throws NotFoundException {
        int listEcritureComptableSize = comptabiliteDao.getListEcritureComptable().size();
 
-       comptabiliteDao.deleteEcritureComptable(-1);
+       comptabiliteDao.deleteEcritureComptable(-4);
 
        assertThat(listEcritureComptableSize - 1).isEqualTo(comptabiliteDao.getListEcritureComptable().size());
     }
